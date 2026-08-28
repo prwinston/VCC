@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Gallery — Victory Community Centre</title>
+<meta name="description" content="A journey through the years — the family of Victory Community Centre, a bible-believing Assemblies of God church in Taman Desa, Kuala Lumpur, in worship, fellowship and celebration.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.victorycommunitycentre.org/memory-gallery.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;500;600;700&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;color:#3d3120;font-family:'Public Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+    background-color:#e7dabc;
+    background-image:
+      radial-gradient(1200px 700px at 15% 0%, rgba(216,196,152,.55), transparent 60%),
+      radial-gradient(900px 600px at 90% 20%, rgba(198,170,120,.45), transparent 55%),
+      radial-gradient(1000px 800px at 60% 100%, rgba(206,182,138,.5), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  a{color:#2f4a7a;text-decoration:none}
+  a:hover{color:#b8752a}
+  .wrap{max-width:1180px;margin:0 auto;padding-left:40px;padding-right:40px}
+  .navlink{font:600 13px 'Public Sans';color:rgba(255,255,255,.78);transition:color .15s}
+  .navlink:hover{color:#f0a33c}
+  .kicker{font-family:'Shadows Into Light Two',cursive;font-size:19px;letter-spacing:.12em;text-transform:uppercase;color:#f0a33c}
+
+  /* ---- scrapbook eras ---- */
+  .era{position:relative;padding-top:44px;padding-bottom:22px}
+  .era-head{display:flex;align-items:center;gap:22px;width:min(700px,94%);margin:0 auto 6px;position:relative}
+  .year-hand{font-family:'Caveat',cursive;font-weight:700;font-size:64px;line-height:.9;color:#8a3128;text-shadow:0 1px 0 rgba(255,250,235,.5)}
+  .theme-note{font-family:'Caveat',cursive;font-weight:500;font-size:25px;color:#42361f;background:#fbf2d8;padding:7px 18px 9px;filter:url(#tear) drop-shadow(0 5px 9px rgba(80,55,20,.22));transform:rotate(-1.6deg)}
+
+  .spread{position:relative;padding:6px 0 8px}
+  .frame{position:relative;width:min(620px,90%);margin:38px auto}
+  .frame:nth-of-type(3n+1){transform:rotate(-1.5deg)}
+  .frame:nth-of-type(3n+2){transform:rotate(1.7deg);margin-left:auto;margin-right:8%}
+  .frame:nth-of-type(3n+3){transform:rotate(-.8deg);margin-left:6%}
+  .frame::before{content:'';position:absolute;inset:-16px -16px -66px;background:linear-gradient(150deg,#fdfaf0,#f4ecd6);filter:url(#tear) drop-shadow(0 14px 22px rgba(70,48,20,.30));z-index:0}
+  .frame img{position:relative;z-index:1;display:block;width:100%;cursor:zoom-in}
+  .frame figcaption{position:relative;z-index:1;font-family:'Caveat',cursive;font-weight:600;font-size:28px;color:#5a4626;text-align:center;padding-top:14px;line-height:1.12}
+  .frame .stamp{position:relative;z-index:1;display:block;text-align:center;font-family:'Shadows Into Light Two',cursive;font-size:15px;letter-spacing:.14em;color:#a06a2c;margin-top:10px;text-transform:uppercase}
+
+  /* washi tape */
+  .tape{position:absolute;z-index:3;width:120px;height:32px;opacity:.78;box-shadow:0 2px 5px rgba(60,40,15,.18);mix-blend-mode:multiply}
+  .tape.tl{top:-26px;left:34px;transform:rotate(-24deg)}
+  .tape.tr{top:-24px;right:34px;transform:rotate(21deg)}
+  .tape-rose{background:repeating-linear-gradient(45deg,rgba(196,120,120,.55) 0 7px,rgba(214,150,150,.4) 7px 14px)}
+  .tape-blue{background:repeating-linear-gradient(45deg,rgba(96,128,168,.5) 0 7px,rgba(140,168,196,.38) 7px 14px)}
+  .tape-sage{background:repeating-linear-gradient(45deg,rgba(128,150,110,.5) 0 7px,rgba(160,178,140,.38) 7px 14px)}
+  .tape-ochre{background:repeating-linear-gradient(45deg,rgba(198,152,84,.55) 0 7px,rgba(216,182,128,.4) 7px 14px)}
+
+  /* floral accents */
+  .bloom{position:absolute;z-index:0;pointer-events:none;opacity:.9;filter:drop-shadow(0 3px 4px rgba(80,55,20,.16))}
+
+  .torn-divider{height:38px;background:#1d2a5b;filter:url(#tearWide);margin-top:-2px}
+
+  @media(max-width:900px){
+    .wrap{padding-left:22px;padding-right:22px}
+    .desktop-nav{display:none}
+    .frame{width:94% !important;margin-left:auto !important;margin-right:auto !important}
+    .year-hand{font-size:50px}
+  }
+
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:rgba(30,24,12,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:30px;cursor:zoom-out}
+  #lb.open{display:flex}
+  #lb img{max-width:100%;max-height:100%;border:10px solid #fdfaf0;box-shadow:0 20px 60px rgba(0,0,0,.55)}
+  #lb .x{position:absolute;top:20px;right:26px;color:#fff;font:400 34px 'Public Sans';line-height:1;opacity:.85}
+</style>
+</head>
+<body>
+
+<!-- SVG defs: torn-paper filter + floral symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="tear" x="-8%" y="-25%" width="116%" height="150%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.014 0.05" numOctaves="3" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="17" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="tearWide" x="-2%" y="-60%" width="104%" height="220%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.12" numOctaves="2" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="22" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <symbol id="fl-rose" viewBox="0 0 100 100">
+    <g>
+      <ellipse cx="50" cy="30" rx="14" ry="20" fill="#c97b82"/>
+      <ellipse cx="30" cy="45" rx="14" ry="20" fill="#d18e94" transform="rotate(-55 30 45)"/>
+      <ellipse cx="70" cy="45" rx="14" ry="20" fill="#d18e94" transform="rotate(55 70 45)"/>
+      <ellipse cx="38" cy="66" rx="14" ry="20" fill="#c97b82" transform="rotate(-115 38 66)"/>
+      <ellipse cx="62" cy="66" rx="14" ry="20" fill="#c97b82" transform="rotate(115 62 66)"/>
+      <circle cx="50" cy="50" r="11" fill="#e7b24d"/>
+    </g>
+  </symbol>
+  <symbol id="fl-daisy" viewBox="0 0 100 100">
+    <g fill="#f3ead3" stroke="#d8c48f" stroke-width="1.5">
+      <ellipse cx="50" cy="24" rx="8" ry="17"/>
+      <ellipse cx="76" cy="50" rx="8" ry="17" transform="rotate(90 76 50)"/>
+      <ellipse cx="50" cy="76" rx="8" ry="17"/>
+      <ellipse cx="24" cy="50" rx="8" ry="17" transform="rotate(90 24 50)"/>
+      <ellipse cx="68" cy="32" rx="8" ry="17" transform="rotate(45 68 32)"/>
+      <ellipse cx="68" cy="68" rx="8" ry="17" transform="rotate(-45 68 68)"/>
+      <ellipse cx="32" cy="68" rx="8" ry="17" transform="rotate(45 32 68)"/>
+      <ellipse cx="32" cy="32" rx="8" ry="17" transform="rotate(-45 32 32)"/>
+    </g>
+    <circle cx="50" cy="50" r="12" fill="#e0a63a"/>
+  </symbol>
+  <symbol id="fl-sprig" viewBox="0 0 100 100">
+    <g fill="none" stroke="#7f9367" stroke-width="3.4" stroke-linecap="round">
+      <path d="M50 92 C50 60 50 40 50 12"/>
+      <path d="M50 66 C34 60 26 50 24 38"/>
+      <path d="M50 54 C66 48 74 38 76 26"/>
+      <path d="M50 40 C36 36 30 28 28 18"/>
+    </g>
+    <g fill="#93a878">
+      <ellipse cx="22" cy="35" rx="8" ry="4.5" transform="rotate(-35 22 35)"/>
+      <ellipse cx="78" cy="23" rx="8" ry="4.5" transform="rotate(35 78 23)"/>
+      <ellipse cx="26" cy="15" rx="7" ry="4" transform="rotate(-35 26 15)"/>
+      <ellipse cx="50" cy="9" rx="6" ry="8" fill="#c97b82"/>
+    </g>
+  </symbol>
+  <symbol id="fl-bud" viewBox="0 0 100 100">
+    <g fill="none" stroke="#7f9367" stroke-width="3.4" stroke-linecap="round"><path d="M50 94 L50 40"/></g>
+    <ellipse cx="50" cy="30" rx="16" ry="24" fill="#e2a3b0"/>
+    <ellipse cx="50" cy="30" rx="7" ry="20" fill="#cf8090"/>
+    <ellipse cx="34" cy="58" rx="9" ry="5" fill="#93a878" transform="rotate(-30 34 58)"/>
+    <ellipse cx="66" cy="66" rx="9" ry="5" fill="#93a878" transform="rotate(30 66 66)"/>
+  </symbol>
+</svg>
+
+<!-- HEADER -->
+<header style="position:sticky;top:0;z-index:40;background:#1d2a5b">
+  <div class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between">
+    <a href="index.html" style="display:flex;align-items:center;gap:11px;color:#fff">
+      <span style="width:34px;height:34px;border-radius:9px;background:#f0a33c;display:flex;align-items:center;justify-content:center;font:800 17px 'Bricolage Grotesque';color:#1d2a5b">V</span>
+      <span style="line-height:1"><span style="display:block;font:800 15px 'Bricolage Grotesque';letter-spacing:-.01em">Victory Community Centre</span><span style="display:block;font:600 9px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:3px">Assemblies of God</span></span>
+    </a>
+    <nav class="desktop-nav" style="display:flex;align-items:center;gap:26px">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="index.html#sermon">Sermons</a>
+      <a class="navlink" href="index.html#testimonies">Testimonies</a>
+      <a class="navlink" href="index.html#give">Give</a>
+      <a href="index.html#visit" style="padding:10px 18px;background:#f0a33c;color:#14182b;border-radius:8px;font:700 12.5px 'Public Sans'">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section style="background:#1d2a5b;color:#fff;position:relative;overflow:hidden">
+  <div style="position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(240,163,60,.28),transparent 66%)"></div>
+  <div class="wrap" style="padding-top:60px;padding-bottom:70px;position:relative">
+    <div class="kicker" style="margin-bottom:12px">Our scrapbook of years</div>
+    <h1 style="font-family:'Caveat',cursive;font-weight:700;font-size:78px;line-height:.95;letter-spacing:-.01em;margin:0">Memory Gallery</h1>
+    <p style="font:400 17px/1.6 'Public Sans';color:rgba(255,255,255,.8);max-width:540px;margin:20px 0 0">Pressed like flowers between the pages — worship, fellowship and celebration as one family of faith. The newest memories are pinned up top; keep turning back to where it all began.</p>
+  </div>
+</section>
+<div class="torn-divider"></div>
+
+<main class="wrap" style="padding-bottom:70px">
+
+  <!-- 2023–24 (new) -->
+  <section class="era">
+    <svg class="bloom" style="top:22px;left:1%;width:80px" aria-hidden="true"><use href="#fl-bud"/></svg>
+    <div class="era-head"><span class="year-hand">2023&ndash;24</span><span class="theme-note">At the pulpit &amp; together again</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-blue tl"></span><span class="tape tape-ochre tr"></span><img loading="lazy" src="assets/gallery/collage-new-c.jpg" alt="Sharing from the pulpit, fellowship and celebration in our new home"><figcaption>Preaching, praising &amp; doing life together</figcaption><span class="stamp">To God be the glory</span></figure>
+    </div>
+  </section>
+
+  <!-- 2020–2022 (new) -->
+  <section class="era">
+    <svg class="bloom" style="top:24px;right:2%;width:78px" aria-hidden="true"><use href="#fl-daisy"/></svg>
+    <div class="era-head"><span class="year-hand">Blessing</span><span class="theme-note">Passing on our electronic drum kit to Ps Stephen</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-sage tl"></span><span class="tape tape-rose tr"></span><img loading="lazy" src="assets/gallery/collage-new-d.jpg" alt="Handing over our Alesis electronic drum kit to Ps Stephen, with fellowship and celebration"><figcaption>Our drum kit, given to Ps Stephen &mdash; a joy to share</figcaption><span class="stamp">Freely we have received</span></figure>
+    </div>
+  </section>
+
+  <!-- 2020–2022 legacy -->
+  <section class="era">
+    <svg class="bloom" style="top:20px;right:2%;width:82px" aria-hidden="true"><use href="#fl-rose"/></svg>
+    <div class="era-head"><span class="year-hand">2020&ndash;22</span><span class="theme-note">New faces, same family &mdash; back together again</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-rose tl"></span><span class="tape tape-sage tr"></span><img loading="lazy" src="assets/gallery/collage-new-a.jpg" alt="Mother's Day, women's fellowship, Chinese New Year and a poolside baptism"><figcaption>Milestones &amp; fellowship &mdash; every season together</figcaption><span class="stamp">Victory family</span></figure>
+    </div>
+  </section>
+
+  <!-- 2020 -->
+  <section class="era">
+    <svg class="bloom" style="top:34px;left:1%;width:74px" aria-hidden="true"><use href="#fl-sprig"/></svg>
+    <div class="era-head"><span class="year-hand">2020</span><span class="theme-note">Rallies &amp; full-hearted fellowship</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-ochre tl"></span><img loading="lazy" src="assets/gallery/collage-2020-a.jpg" alt="Rallies & fellowship, 2020"><figcaption>Gathered close, hearts full</figcaption></figure>
+      <figure class="frame"><span class="tape tape-blue tl"></span><span class="tape tape-rose tr"></span><img loading="lazy" src="assets/gallery/collage-2020-b.jpg" alt="Vicky's baptism, prayer, meals and life together in 2020"><figcaption>Vicky's baptism &amp; a year of laughter together</figcaption><span class="stamp">18 January 2020</span></figure>
+    </div>
+  </section>
+
+  <!-- 2017 -->
+  <section class="era">
+    <svg class="bloom" style="top:24px;right:3%;width:78px" aria-hidden="true"><use href="#fl-daisy"/></svg>
+    <div class="era-head"><span class="year-hand">2017</span><span class="theme-note">Worship, outings &amp; so many celebrations</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-blue tl"></span><img loading="lazy" src="assets/gallery/collage-2017-a.jpg" alt="Worship, outings & celebrations, 2017"><figcaption>Out and about, praising together</figcaption></figure>
+      <figure class="frame"><span class="tape tape-rose tr"></span><img loading="lazy" src="assets/gallery/collage-2017-b.jpg" alt="Worship, outings & celebrations, 2017"><figcaption>Feasts, friends &amp; laughter</figcaption></figure>
+      <figure class="frame"><span class="tape tape-sage tl"></span><span class="tape tape-ochre tr"></span><img loading="lazy" src="assets/gallery/collage-2017-c.jpg" alt="Worship, outings & celebrations, 2017"><figcaption>So much to celebrate</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 2016 -->
+  <section class="era">
+    <svg class="bloom" style="top:30px;left:2%;width:70px" aria-hidden="true"><use href="#fl-bud"/></svg>
+    <div class="era-head"><span class="year-hand">2016</span><span class="theme-note">Our church family &middot; Faber Towers</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-ochre tl"></span><img loading="lazy" src="assets/gallery/collage-2016-a.jpg" alt="Church family gatherings · Faber Towers, 2016"><figcaption>Home at Faber Towers</figcaption></figure>
+      <figure class="frame"><span class="tape tape-blue tr"></span><img loading="lazy" src="assets/gallery/collage-2016-b.jpg" alt="Church family gatherings · Faber Towers, 2016"><figcaption>One big family</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 2015 -->
+  <section class="era">
+    <svg class="bloom" style="top:26px;right:2%;width:80px" aria-hidden="true"><use href="#fl-rose"/></svg>
+    <div class="era-head"><span class="year-hand">2015</span><span class="theme-note">One family, full of joy</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-rose tl"></span><img loading="lazy" src="assets/gallery/collage-2015-a.jpg" alt="One family, full of joy, 2015"><figcaption>Full of joy</figcaption></figure>
+      <figure class="frame"><span class="tape tape-sage tl"></span><span class="tape tape-ochre tr"></span><img loading="lazy" src="assets/gallery/premises-2015.jpg" alt="The Victory Community Centre premises at Faber Towers, 2015"><figcaption>Our home at Faber Towers <span style="display:block;font-size:20px;color:#7a6a4a">(before we relocated to Level 10)</span></figcaption><span class="stamp">Victory Community Centre</span></figure>
+    </div>
+  </section>
+
+  <!-- 2011–2012 (new) -->
+  <section class="era">
+    <svg class="bloom" style="top:22px;left:1%;width:76px" aria-hidden="true"><use href="#fl-sprig"/></svg>
+    <div class="era-head"><span class="year-hand">2011&ndash;12</span><span class="theme-note">Praise nights &amp; Christmas cheer</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-sage tl"></span><span class="tape tape-rose tr"></span><img loading="lazy" src="assets/gallery/collage-new-b.jpg" alt="Worship band, Christmas party and full-house gatherings"><figcaption>Lifting His praise &mdash; night after night</figcaption><span class="stamp">Still praising</span></figure>
+    </div>
+  </section>
+
+  <!-- 2008 -->
+  <section class="era">
+    <svg class="bloom" style="top:20px;right:3%;width:84px" aria-hidden="true"><use href="#fl-daisy"/></svg>
+    <div class="era-head"><span class="year-hand">2008</span><span class="theme-note">Life together &mdash; worship, little ones &amp; feasts</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-blue tl"></span><img loading="lazy" src="assets/gallery/collage-2008-a.jpg" alt="Life together, 2008"><figcaption>Doing life together</figcaption></figure>
+      <figure class="frame"><span class="tape tape-ochre tr"></span><img loading="lazy" src="assets/gallery/collage-2008-b.jpg" alt="Life together, 2008"><figcaption>Around the table</figcaption></figure>
+      <figure class="frame"><span class="tape tape-rose tl"></span><img loading="lazy" src="assets/gallery/collage-2008-c.jpg" alt="Life together, 2008"><figcaption>Worship &amp; the Word</figcaption></figure>
+      <figure class="frame"><span class="tape tape-sage tr"></span><img loading="lazy" src="assets/gallery/collage-2008-d.jpg" alt="Life together, 2008"><figcaption>The little ones</figcaption></figure>
+      <figure class="frame"><span class="tape tape-ochre tl"></span><img loading="lazy" src="assets/gallery/collage-2008-e.jpg" alt="Life together, 2008"><figcaption>Celebrations</figcaption></figure>
+      <figure class="frame"><span class="tape tape-blue tr"></span><img loading="lazy" src="assets/gallery/collage-2008-f.jpg" alt="Life together, 2008"><figcaption>Fellowship days</figcaption></figure>
+      <figure class="frame"><span class="tape tape-rose tl"></span><img loading="lazy" src="assets/gallery/collage-2008-g.jpg" alt="Life together, 2008"><figcaption>Growing in grace</figcaption></figure>
+      <figure class="frame"><span class="tape tape-sage tl"></span><img loading="lazy" src="assets/gallery/collage-2008-h.jpg" alt="Life together, 2008"><figcaption>Hands lifted high</figcaption></figure>
+      <figure class="frame"><span class="tape tape-ochre tr"></span><img loading="lazy" src="assets/gallery/collage-2008-i.jpg" alt="Life together, 2008"><figcaption>Joy in the house</figcaption></figure>
+      <figure class="frame"><span class="tape tape-blue tl"></span><img loading="lazy" src="assets/gallery/collage-2008-j.jpg" alt="Life together, 2008"><figcaption>Family, always</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 2007 -->
+  <section class="era">
+    <svg class="bloom" style="top:26px;left:2%;width:72px" aria-hidden="true"><use href="#fl-bud"/></svg>
+    <div class="era-head"><span class="year-hand">2007</span><span class="theme-note">Growing, year by year</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-rose tl"></span><img loading="lazy" src="assets/gallery/collage-2007-a.jpg" alt="Growing as a family, 2007"><figcaption>Every year a little bigger</figcaption></figure>
+      <figure class="frame"><span class="tape tape-sage tr"></span><img loading="lazy" src="assets/gallery/collage-2007-b.jpg" alt="Growing as a family, 2007"><figcaption>New friends in faith</figcaption></figure>
+      <figure class="frame"><span class="tape tape-ochre tl"></span><img loading="lazy" src="assets/gallery/collage-2007-c.jpg" alt="Growing as a family, 2007"><figcaption>Learning together</figcaption></figure>
+      <figure class="frame"><span class="tape tape-blue tr"></span><img loading="lazy" src="assets/gallery/collage-2007-d.jpg" alt="Growing as a family, 2007"><figcaption>Side by side</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 2004–2005 -->
+  <section class="era">
+    <svg class="bloom" style="top:22px;right:2%;width:82px" aria-hidden="true"><use href="#fl-rose"/></svg>
+    <div class="era-head"><span class="year-hand">2004&ndash;05</span><span class="theme-note">Breaking the limits, setting the pace</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-ochre tl"></span><img loading="lazy" src="assets/gallery/collage-early-a.jpg" alt="Breaking the limits, 2004–2005"><figcaption>Breaking the limits</figcaption></figure>
+      <figure class="frame"><span class="tape tape-rose tr"></span><img loading="lazy" src="assets/gallery/collage-early-b.jpg" alt="Setting the pace, 2004–2005"><figcaption>Setting the pace</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Where it began -->
+  <section class="era">
+    <svg class="bloom" style="top:20px;left:2%;width:78px" aria-hidden="true"><use href="#fl-sprig"/></svg>
+    <div class="era-head"><span class="year-hand" style="font-size:52px">Where it began</span><span class="theme-note">A church remembered &middot; 2002&ndash;now</span></div>
+    <div class="spread">
+      <figure class="frame"><span class="tape tape-blue tl"></span><img loading="lazy" src="assets/gallery/mvc-address.jpg" alt="Our first home — Calvary Charismatic Centre, The Church @ Mid Valley City"><figcaption>Our very first home <span style="display:block;font-size:20px;color:#7a6a4a">(2002&ndash;2013)</span></figcaption><span class="stamp">Mid Valley City</span></figure>
+      <figure class="frame"><span class="tape tape-sage tr"></span><img loading="lazy" src="assets/gallery/mvc-community-services.jpg" alt="Calvary Charismatic Centre — Community Services Partnership"><figcaption>Helping people, changing lives</figcaption></figure>
+    </div>
+
+    <div style="position:relative;width:min(760px,92%);margin:30px auto 8px">
+      <div style="position:absolute;inset:-16px -16px -22px;background:linear-gradient(160deg,#fdfaf0,#f2e9d2);filter:url(#tear) drop-shadow(0 16px 26px rgba(70,48,20,.28));z-index:0"></div>
+      <div style="position:relative;z-index:1;padding:14px 30px 8px">
+        <div style="font-family:'Caveat',cursive;font-weight:700;font-size:40px;color:#8a3128;line-height:1;margin-bottom:2px">A Church Remembered</div>
+        <div style="font-family:'Shadows Into Light Two',cursive;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#a06a2c;margin-bottom:20px">Our story, 2002 &mdash; now</div>
+        <div style="font:400 16.5px/1.75 'Public Sans';color:#43361f;max-width:60ch">
+          <p style="margin:0 0 15px">Victory Community Centre KL was born from a journey that began far from Kuala Lumpur. On <strong>14 September 2002</strong>, a group of believers who had come from Calvary Charismatic Centre in Kota Kinabalu gathered together and chartered a new church in the capital. In those early days the congregation was known as <strong>Calvary Charismatic Centre Kuala Lumpur (CCCKL)</strong>, making its home in a meeting room at Cititel Hotel, Mid Valley. It was a modest beginning &mdash; but the worship was real and the community was alive.</p>
+          <p style="margin:0 0 15px">For several years Sunday services were held at Cititel. When the hotel underwent renovation, the congregation moved to the Boulevard Hotel &mdash; now St. Giles &mdash; and continued to gather faithfully. During this season the church approached Mid Valley Management under the IGB Group, hoping to secure an office lot for worship at a token sum. The request was not granted.</p>
+          <p style="margin:0 0 15px">Undeterred, the church made a practical, faith-filled decision: to move into a rented office lot at <strong>15-6, Boulevard Office</strong>. The hotel had become costly to maintain, and the office lot offered what the hotel could not &mdash; affordable space available to the congregation twenty-four hours a day, seven days a week.</p>
+          <p style="margin:0 0 15px">By <strong>2013</strong>, rising rentals prompted another move &mdash; to a three-storey shop lot at <strong>16-2, Jalan 1/109E, Desa Business Park, Taman Desa</strong>, directly facing Taman Desa Hospital. It was understood to be a temporary shelter, a place to gather while the church waited for something more permanent.</p>
+          <p style="margin:0 0 15px">The wait was not without purpose. When Faber Tower was acquired by public-listed PJD and fully renovated &mdash; brightened, modernised, fitted with elevators and full facilities &mdash; CCCKL saw the opportunity and relocated there in <strong>early 2015</strong>.</p>
+          <p style="margin:0">It was in this new season that the church received a new name. Calvary Charismatic Centre Kuala Lumpur was officially renamed <strong>Victory Community Centre A/G</strong> &mdash; a name carrying forward the church's identity, its affiliation, and its continuing story of faith on the move.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#1d2a5b;color:#fff">
+  <div class="torn-divider" style="background:#e7dabc"></div>
+  <div class="wrap" style="padding-top:44px;padding-bottom:36px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:11px">
+      <span style="width:34px;height:34px;border-radius:9px;background:#f0a33c;display:flex;align-items:center;justify-content:center;font:800 17px 'Bricolage Grotesque';color:#1d2a5b">V</span>
+      <span style="font:800 15px 'Bricolage Grotesque'">Victory Community Centre</span>
+    </div>
+    <div style="font:400 13px/1.6 'Public Sans';color:rgba(255,255,255,.62)">1001, Level 10, Faber Towers, Jln Desa Bahagia, Taman Desa, 58100 Kuala Lumpur &middot; Sundays 10:30 AM</div>
+    <a href="index.html" style="font:700 13px 'Public Sans';color:#f0a33c">&larr; Back to home</a>
+  </div>
+</footer>
+
+<div id="lb" onclick="this.classList.remove('open')"><span class="x">&times;</span><img id="lbimg" alt=""></div>
+<script>
+  document.querySelectorAll('main img').forEach(function(im){
+    im.addEventListener('click',function(){
+      var lb=document.getElementById('lb');
+      document.getElementById('lbimg').src=im.src;
+      lb.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
