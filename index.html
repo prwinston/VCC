@@ -83,7 +83,7 @@
   "@context": "https://schema.org",
   "@type": "AudioObject",
   "name": "Treasuring God's Grace",
-  "description": "An audio sermon by Pastor Winston Chew on treasuring the grace of God (Genesis 25:19-34) — learning to hold His unmerited favour as the most precious gift and to live from a heart that treasures Him.",
+  "description": "An audio sermon by Pastor Winston Chew on treasuring the grace of God — learning to hold His unmerited favour as the most precious gift and to live from a heart that treasures Him.",
   "contentUrl": "https://www.victorycommunitycentre.org/assets/treasuring-gods-grace.mp3",
   "url": "https://www.victorycommunitycentre.org/#sermon",
   "encodingFormat": "audio/mpeg",
@@ -211,6 +211,26 @@
     .give-cards{grid-template-columns:1fr!important}
     h1{font-size:36px!important}
   }
+  .dev-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+  .dev-tab{display:flex;flex-direction:column;gap:4px;text-align:left;padding:14px 16px;border-radius:12px;border:1px solid rgba(20,24,43,.12);background:#fff;cursor:pointer;color:#14182b;transition:background .2s,border-color .2s}
+  .dev-tab:hover{border-color:#f0a33c}
+  .dev-tab[aria-selected="true"]{background:#1d2a5b;border-color:#1d2a5b;color:#fff}
+  .dev-tab-n{font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e}
+  .dev-tab[aria-selected="true"] .dev-tab-n{color:#f0a33c}
+  .dev-tab-t{font:700 14px/1.25 'Bricolage Grotesque'}
+  .dev-panel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:start}
+  .dev-panel[hidden]{display:none}
+  .dev-scripture{background:#1d2a5b;border-radius:16px;padding:30px;position:sticky;top:100px}
+  .dev-body{display:flex;flex-direction:column;gap:36px}
+  .dev-p{font:400 16px/1.75 'Public Sans';color:#2e3346;margin:14px 0 0;text-wrap:pretty}
+  .dev-take{font:500 15px/1.6 'Public Sans';color:#14182b;margin:18px 0 0;padding:14px 18px;background:#eceae3;border-radius:10px}
+  .dev-respond{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-top:30px;border-top:1px solid #d9d6cc}
+  @media(max-width:900px){
+    .dev-tabs{grid-template-columns:repeat(5,minmax(120px,1fr));overflow-x:auto;padding-bottom:6px}
+    .dev-panel{grid-template-columns:1fr;gap:28px}
+    .dev-scripture{position:static}
+    .dev-respond{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
@@ -225,7 +245,7 @@
     <nav class="desktop-nav" style="display:flex;align-items:center;gap:26px">
       <a class="navlink" href="#about">About</a>
       <a class="navlink" href="#sermon">Sermons</a>
-      <a class="navlink" href="#sunday">Devotional</a>
+      <a class="navlink" href="#devotional">Devotional</a>
       <a class="navlink" href="#testimonies">Testimonies</a>
       <a class="navlink" href="memory-gallery.html">Our History</a>
       <a class="navlink" href="#give">Give</a>
@@ -321,7 +341,7 @@
     <div>
       <div class="kicker" style="color:#c07f1e;margin-bottom:16px">Latest sermon</div>
       <h2 style="font:700 34px/1.15 'Bricolage Grotesque';letter-spacing:-.02em">Treasuring God's Grace</h2>
-      <p style="font:400 15px/1.65 'Public Sans';color:#5a5f70;margin:16px 0 0">A message on treasuring the grace of God (Genesis 25:19-34) — learning to hold His unmerited favour as the most precious gift and to live from a heart that treasures Him.</p>
+      <p style="font:400 15px/1.65 'Public Sans';color:#5a5f70;margin:16px 0 0">A message on treasuring the grace of God — learning to hold His unmerited favour as the most precious gift and to live from a heart that treasures Him.</p>
       <div style="display:flex;gap:20px;margin-top:20px;font:500 13px 'Public Sans';color:#6a6f80;flex-wrap:wrap">
         <span>Ps Winston Chew</span><span>·</span><span>20 Sept 2026</span>
       </div>
@@ -356,6 +376,219 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- DEVOTIONAL -->
+<section id="devotional" class="wrap" style="padding-top:84px;padding-bottom:84px">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div>
+      <div class="kicker" style="margin-bottom:16px">Devotional · 5-day series</div>
+      <h2 style="font:700 36px/1.1 'Bricolage Grotesque';letter-spacing:-.02em">Treasuring God's Grace</h2>
+    </div>
+    <p style="font:400 14px/1.6 'Public Sans';color:#5a5f70;max-width:380px;margin:0">Five days in Genesis 25 — a companion to the 20 Sept sermon. Read one day at a time, reflect, and pray.</p>
+  </div>
+  <div class="dev-tabs" role="tablist" aria-label="Devotional days" style="margin-top:36px">
+      <button class="dev-tab" type="button" role="tab" aria-selected="true" data-day="1"><span class="dev-tab-n">Day 1</span><span class="dev-tab-t">Spoken Before We Moved</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="2"><span class="dev-tab-n">Day 2</span><span class="dev-tab-t">The Split Table</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="3"><span class="dev-tab-n">Day 3</span><span class="dev-tab-t">Stew And Scheming</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="4"><span class="dev-tab-n">Day 4</span><span class="dev-tab-t">The Son Who Kept It</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="5"><span class="dev-tab-n">Day 5</span><span class="dev-tab-t">The Pearl</span></button>
+  </div>
+  <div style="margin-top:28px">
+    <article class="dev-panel" id="devotional-day-1" data-day="1" role="tabpanel">
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 1 · Spoken Before We Moved</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff">Genesis 25:21–23 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Now Isaac pleaded with the LORD for his wife, because she was barren; and the LORD granted his plea, and Rebekah his wife conceived. But the children struggled together within her; and she said, 'If all is well, why am I like this?' So she went to inquire of the LORD. And the LORD said to her: 'Two nations are in your womb, Two peoples shall be separated from your body; One people shall be stronger than the other, And the older shall serve the younger.'"</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">Twenty Years of Asking</h3>
+          <p class="dev-p">Isaac married at forty. His sons arrived when he was sixty. For twenty years there was an empty cot in the house of the man God had promised to multiply.</p>
+          <p class="dev-p">We know what that looks like. It is the couple at every Chinese New Year gathering, answering the aunties' "So, when?" with a smile, and then driving home in silence.</p>
+          <p class="dev-p">Isaac's father had faced the same silence and tried to hurry God along through Hagar. Isaac did not do that. He took no second wife and made no backup plan. Verse 21 says only that he pleaded with the Lord for his wife, and the Lord granted his plea. The son had learned what the father learned the hard way.</p>
+          <p class="dev-p">We might be waiting for a child, a job offer, a prodigal's phone call, or a scan result. Whatever it is, we feel the pull to arrange our own Hagar, some move that makes the promise hurry. Isaac shows us another way. He kept bringing the need to God, by name, for as long as it took.</p>
+          <p class="dev-take"><strong>Take-away:</strong> God's promise does not need our help to stand. It needs our trust.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">When the Answer Hurts</h3>
+          <p class="dev-p">The prayer was answered, and then it hurt. The Hebrew word behind "struggled" is harsher than the English suggests. It is closer to crushing than to kicking, and translations soften it in different ways. Rebekah's womb had become a battleground.</p>
+          <p class="dev-p">Her question, "If all is well, why am I like this?", is lament rather than unbelief. And she took it to the right place: she went to inquire of the Lord.</p>
+          <p class="dev-p">Some of us are living inside an answered prayer that feels like a war. It might be the promotion that came with a harsh new boss. It might be the marriage we prayed for, which turned out harder than we expected.</p>
+          <p class="dev-p">God's reply to Rebekah was a word spoken before either boy had done anything. Paul returns to this moment in Romans 9:11. The children had not yet done "any good or evil," so that God's purpose would stand, "not of works but of Him who calls." The turmoil did not cancel that word. The word was there before the struggle began.</p>
+          <p class="dev-take"><strong>Take-away:</strong> Our standing before God was settled before we could earn it or lose it.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>Where are you waiting on God right now, and what shortcut of your own making has been tempting you while you wait?</li>
+              <li>What is one thing you will stop arranging this week, so that you bring it to God instead?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, some of what I'm waiting for has taken longer than I thought I could bear. I confess I've been tempted to build my own answer. Some of the prayers You have answered brought a struggle I didn't expect, and I'm tired. So like Rebekah, I bring my question straight to You. Remind me that You spoke over my life before I did a single thing to deserve it. I rest on that word today, because it was spoken before the struggle and it will still stand after it. Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="devotional-day-2" data-day="2" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 2 · The Split Table</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff">Genesis 25:27–28 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"So the boys grew. And Esau was a skillful hunter, a man of the field; but Jacob was a mild man, dwelling in tents. And Isaac loved Esau because he ate of his game, but Rebekah loved Jacob."</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">Love That Runs Through the Stomach</h3>
+          <p class="dev-p">The twins who fought in the womb grow up into very different men. Esau works the field and Jacob keeps to the tents. Then comes the line that makes every parent wince: Isaac loved Esau because he ate of his game.</p>
+          <p class="dev-p">The Hebrew is blunter still. It reads closer to "because game was in his mouth." Isaac's love ran through his appetite, and two chapters later that same appetite would open the door to deception.</p>
+          <p class="dev-p">Many Asian households know this table well. The son who became a doctor gets introduced first at every wedding dinner. The daughter who gave up her career to care for Ma is quietly taken for granted. Nobody says it out loud, but everyone keeps count, and years later it comes out: "You always liked him better."</p>
+          <p class="dev-p">The narrator adds a surprising word here. Jacob is called "mild," and the Hebrew word usually means whole or complete. It is the same word used of Job. It is a strange label for a boy whose name means Heel-Grabber. The text gives Jacob a word of integrity and then spends chapters showing us a man far from finished.</p>
+          <p class="dev-p">This is the household carrying God's covenant. It has a favourite at each end of the table, and appetite sits at the head.</p>
+          <p class="dev-p">Grace did not wait for Isaac's home to be tidy before it moved in. It won't wait for ours either. Our families do not prove God's promise. His faithfulness does, and even the family of God in Christ lives by forgiving and asking forgiveness.</p>
+          <p class="dev-take"><strong>Take-away:</strong> God works through broken families without pretending they are whole.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>Which pattern from the table you grew up at do you still carry into your relationships? It might be favouritism, scorekeeping, or love that depended on performance.</li>
+              <li>Who in your family could you forgive, or ask forgiveness from, this week, even in one plain sentence?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Father, You know the table I grew up at, the favourites and the silences both. Some of what happened there still shapes how I love and how I expect to be loved. I don't want to pretend my family is whole when it isn't. Thank You that You never needed us to be tidy before You chose to work among us. Give me courage for the one conversation I've been avoiding. I trust You to be faithful in my family even where we have not been. Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="devotional-day-3" data-day="3" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 3 · Stew And Scheming</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff">Genesis 25:29–34 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Now Jacob cooked a stew; and Esau came in from the field, and he was weary. And Esau said to Jacob, 'Please feed me with that same red stew, for I am weary.' Therefore his name was called Edom. But Jacob said, 'Sell me your birthright as of this day.' And Esau said, 'Look, I am about to die; so what is this birthright to me?' Then Jacob said, 'Swear to me as of this day.' So he swore to him, and sold his birthright to Jacob. And Jacob gave Esau bread and stew of lentils; then he ate and drank, arose, and went his way. Thus Esau despised his birthright."</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">Esau and the Trade on a Tired Evening</h3>
+          <p class="dev-p">Esau comes in from the field spent. "Please feed me with that same red stew." Behind the polite English is something cruder, closer to let me gulp down that red stuff.</p>
+          <p class="dev-p">Jacob names his price, and Esau shrugs: "What is this birthright to me?"</p>
+          <p class="dev-p">Esau was not a villain that evening. He was tired and hungry, and the food was right in front of him. That is what makes the scene frightening. The costliest trades rarely come through open rebellion. They come at eleven at night after a long shift, when the craving is loud and eternity feels very far away.</p>
+          <p class="dev-p">For some of us it is the small fudge on the claim form because this month is tight. For others it is the Sunday skipped again because the week wore us down. For a parent, it may be the child who has heard "later" for five years running. None of these feels like despising anything. Each one just feels reasonable.</p>
+          <p class="dev-p">Then read verse 34 slowly: he ate and drank, arose, and went his way. The sentence moves as fast as the man did. There is no pause and no grief. Thus Esau despised his birthright. To despise here does not mean to hate loudly. It means to value something so lightly that we will swap it for whatever the moment wants.</p>
+          <p class="dev-p">Hebrews 12:16 calls him profane, someone who treats the holy as common. Later he wept for the blessing, and his tears could not undo the trade.</p>
+          <p class="dev-take"><strong>Take-away:</strong> Grace is free to receive and costly to treat as common.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">Jacob and the Grip That Wouldn't Let Go</h3>
+          <p class="dev-p">It is tempting to cheer for Jacob. He valued the birthright and Esau did not, and the narrator's verdict falls on Esau.</p>
+          <p class="dev-p">But the narrator never praises Jacob either. His starving brother walks in, and before handing over a single spoonful, Jacob sets his terms. First he says, "Sell me your birthright." Then he adds, "Swear to me." A man who does that is working an angle.</p>
+          <p class="dev-p">The irony is sharp. God had already declared that the older would serve the younger. Jacob was bargaining for something promised to him before he drew breath. The heel-grabber was still grabbing.</p>
+          <p class="dev-p">We know this brother too. We pray, and then we quietly stack every advantage in case God forgets. A parent may script every step of a child's future. A manager may need to win every meeting. We call it diligence, but often it is fear dressed up as responsibility.</p>
+          <p class="dev-p">Genesis spends ten more chapters on Jacob's grasping. He deceives his father, and his uncle deceives him for twenty years. Finally, at Peniel, God wrestles him through the night, and Jacob walks away limping, with a new name.</p>
+          <p class="dev-p">God loved Jacob too much to leave him a grasper. He loves us the same way.</p>
+          <p class="dev-take"><strong>Take-away:</strong> What God has promised, we never have to seize.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>Which brother do you recognise in yourself right now? Is it the one who trades what is holy when tired, or the one who clutches anxiously at what God already promised?</li>
+              <li>What is one guardrail you can set this week to protect what matters most from the urgency of a tired evening? Or, what is one outcome you will stop controlling and leave with God?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, I see myself in Esau more than I like to admit. I call things precious with my mouth and then trade them cheaply when I'm tired and the craving is loud. I see Jacob in me too, grasping at what You had already promised, as if Your word needed my scheming to stand. Teach me to catch the trade while I'm still standing in it, before I've eaten and walked away. Loosen my grip where fear has been holding on. Thank You that Your choice over me held firm through both brothers' failures, and it holds through mine. Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="devotional-day-4" data-day="4" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 4 · The Son Who Kept It</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff">Matthew 4:2–4; Philippians 2:5–7 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"And when He had fasted forty days and forty nights, afterward He was hungry. Now when the tempter came to Him, he said, 'If You are the Son of God, command that these stones become bread.' But He answered and said, 'It is written, "Man shall not live by bread alone, but by every word that proceeds from the mouth of God."'"</p>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Let this mind be in you which was also in Christ Jesus, who, being in the form of God, did not consider it robbery to be equal with God, but made Himself of no reputation, taking the form of a bondservant, and coming in the likeness of men."</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">Hungry in the Wilderness</h3>
+          <p class="dev-p">If Genesis 25 only told us to try harder, we'd be left exactly where Esau and Jacob were, on our own. Today the story turns.</p>
+          <p class="dev-p">Esau came in from one day in the field and was weary. Centuries later, another firstborn Son went into the wilderness and fasted forty days. Afterward He was hungry.</p>
+          <p class="dev-p">Then came the offer: If You are the Son of God, command that these stones become bread. In other words, use Your sonship to feed Your appetite.</p>
+          <p class="dev-p">It was the same test Esau faced, only sharper. Esau had skipped a meal. Jesus was starving. Esau said, "What is this birthright to me?" Jesus answered, "Man shall not live by bread alone."</p>
+          <p class="dev-p">Where Esau traded, Jesus kept. He stood in the exact place where Esau fell, and He stood firm there for us.</p>
+          <p class="dev-take"><strong>Take-away:</strong> Jesus held on to what Esau let go, and He did it on our behalf.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">The One Who Didn't Clutch</h3>
+          <p class="dev-p">Jacob came out of the womb gripping a heel and grew up gripping a birthright that was already his. Paul describes Christ in the opposite way. He was in the form of God and did not consider it robbery to be equal with God. He made Himself of no reputation.</p>
+          <p class="dev-p">Jesus held a glory that was fully His, and He chose not to cling to it. The one thing He gave away was His life, and He gave it for people who had traded and grasped all their lives.</p>
+          <p class="dev-p">Then comes the part that is hard to take in. In Hebrews 12, just after the warning about Esau, the writer describes believers as the church of the firstborn who are registered in heaven.</p>
+          <p class="dev-p">Birth order stops mattering here. It speaks to the eldest child carrying the whole family's expectations, and to the youngest who always felt second. It speaks to the retiree who wonders whether their best years count for anything now. In Christ, each of us is counted a firstborn.</p>
+          <p class="dev-p">Our inheritance is secure. It does not depend on our strength to guard it. He guarded it in the wilderness, and He kept guarding it all the way to the cross and out of the tomb.</p>
+          <p class="dev-take"><strong>Take-away:</strong> Our birthright is safe because it was never kept by our grip.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>When you picture Jesus hungry in the wilderness, turning down the stones, what changes in how you see your own moments of temptation?</li>
+              <li>Where have you been guarding your standing with God as if it depended on your grip, and what will you do this week with the energy that letting go frees up?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord Jesus, You were hungry and You said no. I have said yes to so much less. You held a glory that was fully Yours and did not cling to it, while I clutch at things You already promised me. Thank You for keeping what I kept trading, and for letting go of what I kept grasping. Thank You that You gave Your life, not for a bowl of stew, but for me. I rest today in a birthright You guarded, and I don't have to guard it alone. Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="devotional-day-5" data-day="5" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 5 · The Pearl</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff">Matthew 13:45–46 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Again, the kingdom of heaven is like a merchant seeking beautiful pearls, who, when he had found one pearl of great price, went and sold all that he had and bought it."</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">Neither Trading Nor Grasping</h3>
+          <p class="dev-p">A merchant finds one pearl of great price, sells everything he owns, and buys it.</p>
+          <p class="dev-p">He does not trade it away for something immediate, as Esau did. He does not scheme for it, as Jacob did. He sees what it is worth and gives everything for it gladly.</p>
+          <p class="dev-p">That is what treasuring looks like. It is careless in neither direction. It is not casual like Esau, and it is not anxious like Jacob. It is glad.</p>
+          <p class="dev-p">Treasuring grace is not how we earn our place. It is the evidence of it. What we value when no one is watching tells the truth about our hearts. It looks like the grandmother praying for her grandchildren before dawn, and the fresh graduate who refuses the shortcut the rest of the team takes. It looks like the caregiver who keeps reading the Psalms aloud to a father who no longer remembers her name.</p>
+          <p class="dev-p">None of them has a spotlight. Each has a heart holding close what God calls precious.</p>
+          <p class="dev-p">We started this week with a word God spoke over two boys before they could do anything. We end it here. Grace chose us before we could earn it. So we won't grasp for it like Jacob, and we won't trade it like Esau. We will hold it as the pearl it is, because Christ held it for us first.</p>
+          <p class="dev-take"><strong>Take-away:</strong> Hold precious what God calls precious, because He held you that way first.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>Looking back over these five days, where did you see yourself most clearly, and what did you learn about the way God holds you?</li>
+              <li>What is one specific commitment you will make this week to treasure grace, something you can name, start, and still be keeping next Sunday?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, what You gave me at no cost, help me carry as if it is worth everything, because it is. Keep me from trading it on tired evenings. Keep me from clutching it in anxious ones. Give me the merchant's gladness, the kind that doesn't count what it gives up. Thank You that Your grace ran ahead of me before I was born, and it still runs after me when I fail. Hold me close to what You call precious, and let me hold it close too. Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -533,7 +766,7 @@
     </div>
     <div>
       <div style="font:600 11px 'Public Sans';letter-spacing:.14em;text-transform:uppercase;color:#f0a33c;margin-bottom:16px">Explore</div>
-      <div style="display:flex;flex-direction:column;gap:11px;font:400 13px 'Public Sans'"><a style="color:rgba(255,255,255,.78)" href="#sermon">Sermons</a><a style="color:rgba(255,255,255,.78)" href="#sunday">Devotional</a><a style="color:rgba(255,255,255,.78)" href="#">Articles</a><a style="color:rgba(255,255,255,.78)" href="#testimonies">Testimonies</a></div>
+      <div style="display:flex;flex-direction:column;gap:11px;font:400 13px 'Public Sans'"><a style="color:rgba(255,255,255,.78)" href="#sermon">Sermons</a><a style="color:rgba(255,255,255,.78)" href="#devotional">Devotional</a><a style="color:rgba(255,255,255,.78)" href="#">Articles</a><a style="color:rgba(255,255,255,.78)" href="#testimonies">Testimonies</a></div>
     </div>
     <div>
       <div style="font:600 11px 'Public Sans';letter-spacing:.14em;text-transform:uppercase;color:#f0a33c;margin-bottom:16px">Connect</div>
@@ -550,5 +783,13 @@
   <div style="border-top:1px solid rgba(255,255,255,.1)"><div class="wrap" style="padding-top:20px;padding-bottom:20px;font:400 12px 'Public Sans';color:rgba(255,255,255,.45)">© 2026 Victory Community Centre · Assemblies of God</div></div>
 </footer>
 
+<script>
+document.querySelectorAll('.dev-tab').forEach(function(t){t.addEventListener('click',function(){
+  var d=t.getAttribute('data-day');
+  document.querySelectorAll('.dev-tab').forEach(function(b){b.setAttribute('aria-selected',b===t)});
+  document.querySelectorAll('.dev-panel').forEach(function(p){p.hidden=p.getAttribute('data-day')!==d});
+  var s=document.getElementById('devotional');if(window.innerWidth<900&&s)window.scrollTo({top:s.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'});
+})});
+</script>
 </body>
 </html>
