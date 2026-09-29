@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Treasuring God's Grace — 5-Day Devotional | Victory Community Centre</title>
-<meta name="description" content="Treasuring God's Grace: a 5-day devotional from Genesis 25 by Victory Community Centre, a bible-believing, spirit-filled Assemblies of God church in Taman Desa, Kuala Lumpur. Daily scripture, readings, reflection and prayer.">
+<title>Devotionals — The Weight of Mercy &amp; Treasuring God's Grace | Victory Community Centre</title>
+<meta name="description" content="5-day devotionals from Victory Community Centre, a bible-believing, spirit-filled Assemblies of God church in Taman Desa, Kuala Lumpur. The Weight of Mercy (2 Samuel 11–12) and Treasuring God's Grace (Genesis 25) — scripture, readings, reflection and prayer.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.victorycommunitycentre.org/devotional.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Treasuring God's Grace — 5-Day Devotional">
-<meta property="og:description" content="Five days in Genesis 25 — scripture, readings, reflection and prayer.">
+<meta property="og:title" content="Devotionals — Victory Community Centre">
+<meta property="og:description" content="5-day devotionals: The Weight of Mercy (2 Samuel 11–12) and Treasuring God's Grace (Genesis 25).">
 <meta property="og:url" content="https://www.victorycommunitycentre.org/devotional.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +33,13 @@
   .dev-tab-n{font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e}
   .dev-tab[aria-selected="true"] .dev-tab-n{color:#f0a33c}
   .dev-tab-t{font:700 14px/1.25 'Bricolage Grotesque'}
+  .series-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .series-btn{display:flex;flex-direction:column;gap:6px;text-align:left;padding:20px 22px;border-radius:14px;border:1px solid rgba(20,24,43,.12);background:#fff;cursor:pointer;color:#14182b;transition:background .2s,border-color .2s}
+  .series-btn:hover{border-color:#f0a33c}
+  .series-btn[aria-selected="true"]{background:#1d2a5b;border-color:#1d2a5b;color:#fff}
+  .series-btn[aria-selected="true"] .dev-tab-n{color:#f0a33c}
+  .series-t{font:700 20px/1.2 'Bricolage Grotesque';letter-spacing:-.01em}
+  .dev-series[hidden]{display:none}
   .dev-panel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:start}
   .dev-panel[hidden]{display:none}
   .dev-scripture{background:#1d2a5b;border-radius:16px;padding:30px;position:sticky;top:100px}
@@ -42,6 +49,7 @@
   .dev-respond{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-top:30px;border-top:1px solid #d9d6cc}
   @media(max-width:900px){
     .dev-tabs{grid-template-columns:repeat(5,minmax(120px,1fr));overflow-x:auto;padding-bottom:6px}
+    .series-tabs{grid-template-columns:1fr}
     .dev-panel{grid-template-columns:1fr;gap:28px}
     .dev-scripture{position:static}
     .dev-respond{grid-template-columns:1fr}
@@ -72,17 +80,269 @@
 <section class="hero" style="background:#1d2a5b;color:#fff;position:relative;overflow:hidden">
   <div style="position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(240,163,60,.28),transparent 66%)"></div>
   <div class="wrap" style="padding-top:72px;padding-bottom:72px;position:relative">
-    <div class="kicker" style="margin-bottom:20px">Devotional · 5-day series</div>
-    <h1 style="font:800 58px/1 'Bricolage Grotesque';letter-spacing:-.03em;margin:0">Treasuring<br><span style="color:#f0a33c">God's</span> Grace.</h1>
-    <p style="font:400 18px/1.65 'Public Sans';color:rgba(255,255,255,.82);margin:24px 0 0;max-width:560px">Five days in Genesis 25, written to go with the 20 Sept sermon. Read one day at a time, reflect, and pray.</p>
+    <div class="kicker" style="margin-bottom:20px">Devotionals</div>
+    <h1 style="font:800 58px/1 'Bricolage Grotesque';letter-spacing:-.03em;margin:0">Five days<br>in the <span style="color:#f0a33c">Word</span>.</h1>
+    <p style="font:400 18px/1.65 'Public Sans';color:rgba(255,255,255,.82);margin:24px 0 0;max-width:560px">Each series is written to go with one of our sermons. Pick a series, read one day at a time, reflect, and pray.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:28px">
-      <a href="sermons.html" style="padding:13px 22px;background:#f0a33c;color:#14182b;border-radius:10px;font:700 13px 'Public Sans'">Listen to the sermon</a>
+      <a href="sermons.html" style="padding:13px 22px;background:#f0a33c;color:#14182b;border-radius:10px;font:700 13px 'Public Sans'">Listen to the sermons</a>
     </div>
   </div>
 </section>
 
-<section id="devotional" class="wrap" style="padding-top:56px;padding-bottom:84px">
-  <div class="dev-tabs" role="tablist" aria-label="Devotional days" >
+<section class="wrap" style="padding-top:48px">
+  <div class="series-tabs" role="tablist" aria-label="Devotional series">
+    <button class="series-btn" type="button" role="tab" aria-selected="true" data-series="weight-of-mercy"><span class="dev-tab-n">5 days · 2 Samuel 11–12</span><span class="series-t">The Weight of Mercy</span></button>
+    <button class="series-btn" type="button" role="tab" aria-selected="false" data-series="treasuring-gods-grace"><span class="dev-tab-n">5 days · Genesis 25</span><span class="series-t">Treasuring God's Grace</span></button>
+  </div>
+</section>
+
+<section id="weight-of-mercy" class="wrap dev-series" style="padding-top:56px;padding-bottom:84px">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div>
+      <div class="kicker" style="color:#c07f1e;margin-bottom:12px">Devotional · 2 Samuel 11–12</div>
+      <h2 style="font:700 36px/1.1 'Bricolage Grotesque';letter-spacing:-.02em;margin:0">The Weight of Mercy</h2>
+    </div>
+    <p style="font:400 14px/1.6 'Public Sans';color:#5a5f70;max-width:400px;margin:0">A companion to the sermon <em>God Pursues Us with the Weight of His Mercy</em> by Ps Winston Chew. <a href="sermons.html" style="font-weight:700;color:#1d2a5b">Listen to the sermon &rarr;</a></p>
+  </div>
+  <div class="dev-tabs" role="tablist" aria-label="The Weight of Mercy days" style="margin-top:32px">
+      <button class="dev-tab" type="button" role="tab" aria-selected="true" data-day="1"><span class="dev-tab-n">Day 1</span><span class="dev-tab-t">The First Step Down</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="2"><span class="dev-tab-n">Day 2</span><span class="dev-tab-t">The Sword Devours</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="3"><span class="dev-tab-n">Day 3</span><span class="dev-tab-t">You Are the Man</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="4"><span class="dev-tab-n">Day 4</span><span class="dev-tab-t">I Have Sinned Against the LORD</span></button>
+      <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="5"><span class="dev-tab-n">Day 5</span><span class="dev-tab-t">After the Fall</span></button>
+  </div>
+  <div style="margin-top:28px">
+    <article class="dev-panel" id="mercy-day-1" data-day="1" role="tabpanel">
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 1 of 5</div>
+        <div style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;color:#fff">The First Step Down</div>
+        <div style="font:italic 400 15px/1.5 'Public Sans';color:#f0a33c;margin-top:6px">When Duty Is Left Behind</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)">2 Samuel 11:1–2 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"It happened in the spring of the year, at the time when kings go out to battle, that David sent Joab and his servants with him, and all Israel; and they destroyed the people of Ammon and besieged Rabbah. But David remained at Jerusalem. Then it happened one evening that David arose from his bed and walked on the roof of the king's house. And from the roof he saw a woman bathing, and the woman was very beautiful to behold."</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">The Place You Were Not Meant to Be</h3>
+          <p class="dev-p">We know David as the man who ran toward Goliath when every soldier in Israel stood back. The battlefield was where he was most alive; courage was the native register of his life. Yet this chapter does not open with a battle. It opens with an absence. "But David remained at Jerusalem." The word that carries the most theological weight in verse 1 is not "battle" — it is "remained." He stayed. He sat. He was in the one place he was not meant to be.</p>
+          <p class="dev-p">The narrator does not say that staying home caused what followed — but he sets the two side by side, and the placement is deliberate. Before we read of passion, we read of position. David had given away his post; he had transferred his assignment to Joab and settled into Jerusalem with no mission and no constraint. What followed was the natural consequence of a man with nothing left to guard: he walked, he saw, he inquired, he took. Every step in that sequence followed from the one before it — and every one of them was chosen.</p>
+          <p class="dev-p">The fall of David, as this chapter tells it, began in displacement. The most dangerous position a believer can occupy may not be a visible temptation — it is the position of abandoned responsibility; the quiet, unremarkable place we arrive at when we have given our post to someone else and have nothing left to occupy our hands or discipline our eyes.</p>
+          <p class="dev-p">Yet we must let Nathan have the last word on the root. When God names David's sin, He does not say, "You stayed home." He says, "Why have you despised the commandment of the LORD, to do evil in His sight?" and "you have despised Me" (2 Samuel 12:9–10, NKJV). The abandoned post was the setting; contempt for God and His word was the sin. The empty hours matter because they are where a heart already drifting from God found nothing left to stop it.</p>
+          <p class="dev-take"><strong>Take-away:</strong> The first step down is rarely dramatic — it is simply the step away from where we were meant to stand.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">What the Evening Reveals</h3>
+          <p class="dev-p">We tend to locate the decisive moment of David's fall at the act itself. The text locates it earlier. "Then it happened one evening that David arose from his bed." The king had been lying on his bed as the day cooled. Flat palace rooftops were where one went to catch the cool of the evening — a place of ease, not strategic engagement. David had reached the height of his powers. This is David at rest, unguarded, with nowhere to be and nothing to do.</p>
+          <p class="dev-p">Moral vigilance rarely survives idleness. The discipline that holds our interior life together is sustained by purposeful engagement; when duty keeps our hands and minds at their task, the appetites that would otherwise command us are held — not by willpower alone, but by the structure of faithful living. Remove the structure, and the appetites move in. Structure is not the source of our holiness — grace is — but structure is one of the ways grace keeps us.</p>
+          <p class="dev-p">What the evening reveals about David is not that he was a man of extraordinary weakness. It is that he was a man of ordinary humanity — and ordinary humanity, left with too much power and too little accountability, is fully capable of extraordinary sin. We are not safer than David. We are the same kind of creature, in the same kind of world, with the same kind of need for a post that keeps us where we are meant to be.</p>
+          <p class="dev-p">There is another evening in Scripture, and another King. In Gethsemane, while His closest friends slept, the Son of David stayed at His post and prayed. Then He said to them, "Watch and pray, lest you enter into temptation" (Matthew 26:41, NKJV). David rose from his bed into temptation; Jesus rose from prayer into obedience and went out to the battle that won ours. Our faithfulness at our post does not save us. It is how we follow the King who never left His.</p>
+          <p class="dev-take"><strong>Take-away:</strong> Good intentions do not keep us faithful; God does — and one of the ways He keeps us is a post we do not leave.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>Where in your life have you gradually moved away from a post you were meant to hold — not through rebellion, but through small, unremarkable steps of neglect?</li>
+              <li>What structure of duty or accountability, if reinstated this week, would close the gap that idleness has opened?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, I come to You today more aware than I would like to be of the places I have not been. Not the dramatic failures — but the quiet absences; the responsibilities I have transferred, the posts I have quietly abandoned. Forgive me for mistaking ease for rest, and for the harm my absences have made possible. Guard me not only from temptation, but from the conditions that invite it. Keep me where I am meant to be — in my calling, in my family, in my mission — faithful in the ordinary structure of daily life. For it is in the ordinary that we are either formed or undone. In Jesus' name, Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="mercy-day-2" data-day="2" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 2 of 5</div>
+        <div style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;color:#fff">The Sword Devours</div>
+        <div style="font:italic 400 15px/1.5 'Public Sans';color:#f0a33c;margin-top:6px">What Power Does to a Conscience</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)">2 Samuel 11:14–15, 25, 27 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"In the morning it happened that David wrote a letter to Joab and sent it by the hand of Uriah. And he wrote in the letter, saying, 'Set Uriah in the forefront of the hottest battle, and retreat from him, that he may be struck down and die.'"</p>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Then David said to the messenger, 'Thus you shall say to Joab: "Do not let this thing displease you, for the sword devours one as well as another. Strengthen your attack against the city, and overthrow it." So encourage him.'"</p>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"...But the thing that David had done displeased the LORD."</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">The Letter Uriah Carried</h3>
+          <p class="dev-p">Only a king can do what David does in verses 14 and 15. He writes an order for the death of an innocent man and places it in that man's own hands to carry. Uriah — one of David's mighty men, a soldier of unquestioned loyalty whose name appears in the elite register of 2 Samuel 23 — carries his own death warrant to the front line without knowing it. Only days earlier, this same man had refused even to go home to his wife while the ark and Israel's army were camped in tents (11:11). The foreigner kept his post; the king had left his. Few ironies in Scripture are darker than this: a victim delivering his own death sentence. It is grotesque precisely because it is possible only for the man with absolute authority.</p>
+          <p class="dev-p">This is what unchecked power does, and Scripture traces its devastation consistently across its pages. Pharaoh, whose heart Exodus describes as hardened both by his own choosing and by God's judgment (Exodus 8:15; 9:12), until ten plagues could not move him. Nebuchadnezzar, who set up a golden image and commanded a nation to bow, and flew into a rage when three young men told him no (Daniel 3:13–19). Ahab, who sulked when a subject refused him a vineyard — until Jezebel reminded him that he was king, and Naboth died so that Ahab could take possession (1 Kings 21:7, 16). The pattern is consistent and sobering: proximity to unlimited authority tends to dissolve the interior boundaries that ordinary accountability would have preserved.</p>
+          <p class="dev-p">David knew Uriah. He knew Bathsheba was Uriah's wife. He knew what he was writing. What power had done was not remove his knowledge — it had removed his restraint; it had dismantled the friction that a man without a throne would have encountered long before the letter was signed.</p>
+          <p class="dev-p">Israel's law had seen this danger coming. The king was not to multiply wives for himself, lest his heart turn away, and he was to keep a copy of God's law beside him and read it all the days of his life, so that his heart would not be lifted above his brothers (Deuteronomy 17:17–20). David did not lack a boundary; he had stopped letting God's word be one. Nathan will put it in exactly those terms: David "despised the commandment of the LORD" (2 Samuel 12:9, NKJV).</p>
+          <p class="dev-take"><strong>Take-away:</strong> The danger of authority is not that it makes us blind — it is that it makes us feel entitled to what we see.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">"Do Not Let This Thing Displease You"</h3>
+          <p class="dev-p">The most chilling line in the chapter is not David's order to have Uriah killed. It is what he says after the order has been carried out. "Do not let this thing displease you," he tells the messenger, "for the sword devours one as well as another" (2 Samuel 11:25, NKJV). He reduces the death of one of his own mighty men — a man who had spent his life in the service of the kingdom — to a statistic of war, along with the other soldiers who fell beside him (2 Samuel 11:17). He tells Joab to be encouraged. And he moves on.</p>
+          <p class="dev-p">Then the narrator speaks. Not another character. The narrator himself, in the voice of divine testimony: "But the thing that David had done displeased the LORD" (2 Samuel 11:27, NKJV).</p>
+          <p class="dev-p">Notice the deliberate echo. David uses the word "displease" to instruct a general not to worry. The narrator uses the same word to name God's response. In Hebrew the echo is sharper still: "Let this thing not be evil in your eyes," says the king; "the thing … was evil in the eyes of the LORD," says the narrator. The juxtaposition is not accidental — it is the text's own indictment of David's moral condition. The thing David told others not to be troubled by was the very thing that grieved the heart of God.</p>
+          <p class="dev-p">Power does not only enable sin; it enables the normalisation of sin — the capacity to look at what we have done, give it an ordinary name, and keep moving. We say these things happen. We say it was necessary. We say the sword devours one as well as another. And over that rationalisation, a verdict is already written in heaven: the thing David had done displeased the LORD.</p>
+          <p class="dev-p">Here the Son of David stands in the sharpest possible contrast. David used a king's power to spend another man's life to protect his own name. Jesus used His authority the other way: "For even the Son of Man did not come to be served, but to serve, and to give His life a ransom for many" (Mark 10:45, NKJV). The final answer to power that takes is not only better accountability. It is a different King, and hearts remade to follow Him.</p>
+          <p class="dev-take"><strong>Take-away:</strong> What we have learned to live with without grief is not the measure of what God will leave without judgment.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>Where have you witnessed — or exercised — authority in a way that insulated a decision from its full human cost?</li>
+              <li>What in your own life have you learned to name as ordinary that may, before God, carry more weight than you have allowed?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, today's text makes us uncomfortable — and it should. We have seen what authority without accountability produces, and we know it is not only a king's problem. Wherever we carry influence — in our homes, our workplaces, our communities — guard us from the slow erosion of conscience that power invites. Let us be the kind of people who feel the full weight of our decisions; who are moved by the cost to others, not insulated from it. And where we have already said "do not let this displease you" about something that has, in truth, displeased You — forgive us. Call us to honest account, as You called David. In Jesus' name, Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="mercy-day-3" data-day="3" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 3 of 5</div>
+        <div style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;color:#fff">You Are the Man</div>
+        <div style="font:italic 400 15px/1.5 'Public Sans';color:#f0a33c;margin-top:6px">When God Sends Someone</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)">2 Samuel 12:1, 7 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Then the LORD sent Nathan to David. And he came to him, and said to him: 'There were two men in one city, one rich and the other poor...'"</p>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Then Nathan said to David, 'You are the man! Thus says the LORD God of Israel: "I anointed you king over Israel, and I delivered you from the hand of Saul."'"</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">"Sent"</h3>
+          <p class="dev-p">The word that opens Chapter 12 is the theological key to everything that follows. "Then the LORD sent Nathan to David" (2 Samuel 12:1, NKJV). Three words carry the devotional weight: the LORD sent. Not Nathan arrived. Not David sought counsel. Not the court arranged an appointment. The LORD sent.</p>
+          <p class="dev-p">The verb matters all the more because of where we have just been. Chapter 11 is a chapter of David's sending. He sent Joab (11:1); he sent and inquired about the woman (11:3); he sent messengers and took her (11:4); he sent for Uriah (11:6); he sent the letter (11:14); he sent and brought Bathsheba into his house (11:27). A king who used his sending to take now meets a God who uses His sending to rescue. And before this chapter closes, the LORD will send once more (12:25).</p>
+          <p class="dev-p">After months of silence — after a chapter of deception, murder, and normalisation — the first movement in Chapter 12 is not judgment alone. It is pursuit — judgment carried by a God who comes looking. God moves toward David before David moves toward God. This is what "the LORD sent" means in this text: mercy chooses to travel.</p>
+          <p class="dev-p">We find this posture woven through the full counsel of Scripture — not as an exception, but as a recurring signature of God's character. He sent Joseph ahead of his brothers into Egypt, so that the very man they had tried to destroy would be positioned to preserve them (Genesis 45:7). He sent Moses back to Egypt after forty years in the desert. He sent Jonah — twice — because the word entrusted to him was not for Jonah's comfort but for Nineveh's survival. He sent His Son (Galatians 4:4). The posture of God through the whole of Scripture is not the posture of the one who waits to be sought. It is the posture of the One who sends.</p>
+          <p class="dev-p">And here, He sends Nathan. Not a tribunal. Not a plague. A prophet, with a parable, who walks into the throne room and begins: "There were two men in one city..."</p>
+          <p class="dev-take"><strong>Take-away:</strong> When God sends someone toward us with an uncomfortable word, He is not punishing us — He is pursuing us.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">"You Are the Man"</h3>
+          <p class="dev-p">Nathan's method is deliberate and precise. He does not storm the throne room with accusation — he draws one out of the king. The parable of the ewe lamb builds its case with patient detail: the poor man, the lamb that ate at his table and lay in his arms, the rich man who took it without pity. David, as Nathan fully anticipates, rises to judgment with the full authority of a king: "the man who has done this shall surely die!" (2 Samuel 12:5, NKJV). Then Nathan speaks the words — just two in Hebrew — that collapse every distance David has built between himself and what he has done. "You are the man."</p>
+          <p class="dev-p">We read this as accusation — and it is. But inside the accusation, the text carries grace. Nathan is not condemning David to death — he is cutting the cord that tethers David to the self that has spent months rationalising murder. "You are the man" is the most merciful thing Nathan could have said, because only when David knows he is the man can he confess; only when he confesses can he be forgiven; only when he is forgiven can the story continue.</p>
+          <p class="dev-p">Notice the formal weight of what follows: Nathan speaks not as a petitioner but as a divine ambassador — "Thus says the LORD God of Israel" — and his indictment begins, deliberately, with what God has already given. The anointing. The deliverance from Saul. The house of Israel and Judah. And more: "if that had been too little, I also would have given you much more!" (2 Samuel 12:8, NKJV). God reminds David of the generosity before He names the contempt. This is the shape of all honest confrontation: it begins with the record of grace before it moves to the accounting.</p>
+          <p class="dev-take"><strong>Take-away:</strong> The confrontation we have been avoiding is very often the mercy we have been needing.<br>The word that names us is the word that can also free us — if we will receive it.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>When has God sent someone into your life with an uncomfortable truth — and what did you do with it?</li>
+              <li>Is there a "You are the man" word that has been spoken to you — directly or quietly — that you have not yet fully received?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, we are not always ready to hear what You have to say. We build distance — through routine, through busyness, through the comfort of our own self-assessment. Thank You that You are a God who sends; who does not leave us to our distance, but moves toward us with the word we need. Make us people who receive Your correction as the mercy it is, and give us discernment to know when a word truly comes from You; who do not retreat behind position or defence when You have sent someone with the truth. And where You have called us to be Nathan to someone else — give us the courage to speak clearly, and the wisdom to speak well. In Jesus' name, Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="mercy-day-4" data-day="4" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 4 of 5</div>
+        <div style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;color:#fff">I Have Sinned Against the LORD</div>
+        <div style="font:italic 400 15px/1.5 'Public Sans';color:#f0a33c;margin-top:6px">When Forgiveness Does Not Remove the Consequence</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)">2 Samuel 12:13–14 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"So David said to Nathan, 'I have sinned against the LORD.' And Nathan said to David, 'The LORD also has put away your sin; you shall not die. However, because by this deed you have given great occasion to the enemies of the LORD to blaspheme, the child also who is born to you shall surely die.'"</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">Two Words and No Excuses</h3>
+          <p class="dev-p">David's confession is just two words in Hebrew. Nathan's indictment was two words; so is David's reply. No elaborate ceremony. No rehearsed liturgy. No careful inventory of mitigating circumstances. "I have sinned against the LORD" — and Nathan's response is immediate: "The LORD also has put away your sin; you shall not die" (2 Samuel 12:13, NKJV).</p>
+          <p class="dev-p">The word "also" is worth pausing over. "The LORD also has put away your sin." Also — as if to say: you have spoken, and God, for His part, has acted. The timing is not incidental; it is the nature of genuine confession met by genuine mercy. Where true repentance speaks, forgiveness does not delay.</p>
+          <p class="dev-p">Scripture makes this pattern unmistakable. The prodigal son "came to himself" and rehearsed a speech on the road home — but while he was still a great way off, before he had said a word, his father was already running (Luke 15:20), and the rehearsed request to be made a hired servant was never spoken (Luke 15:19, 21–22). Isaiah 43:25 does not record God waiting for the conditions to be right: "I, even I, am He who blots out your transgressions for My own sake" (NKJV). The direction of forgiveness in Scripture runs consistently from God toward the sinner — not from a sinner who must first produce a worthy enough repentance. The satisfaction God's justice requires, God Himself would one day provide (Romans 3:25–26).</p>
+          <p class="dev-p">David does not earn the response he receives. He does not perform adequate contrition. He simply tells the truth: "I have sinned against the LORD." And from a broken and contrite heart (Psalm 51:17), that is enough. Not because confession is a transaction — but because God is a forgiver, and forgiveness is His character before it is His decision (Exodus 34:6–7). King Saul once said almost the same words — "I have sinned" — and followed them with "yet honor me now" (1 Samuel 15:30, NKJV). The words were nearly identical; the hearts were not.</p>
+          <p class="dev-take"><strong>Take-away:</strong> Confession does not earn forgiveness; it receives it — from a God whose mercy was already waiting at the door.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">"The Sword Shall Not Depart"</h3>
+          <p class="dev-p">Grace, in this chapter, does not dissolve consequence. Nathan's declaration in verse 13 — "the LORD also has put away your sin; you shall not die" — is immediately followed by verse 14: "the child also who is born to you shall surely die" (NKJV). And through verses 10 to 12, the deeper cost is named: the sword will not depart from David's house; what was done in secret will be done in the open — and it would be, on the palace roof where this began (2 Samuel 16:22); the household that deception was meant to protect will become the source of his deepest grief. We must not rush past how hard this is. The text gives a specific reason for the child's death — the public dishonour David's sin brought on the name of the LORD (v. 14) — and it is not offered as a rule for why children die. The child is not being punished for guilt of his own. Scripture is clear that a son does not bear the guilt of the father (Ezekiel 18:20), and David himself expects to go to him (v. 23). The judgment falls on David, and it reaches him through what he loves most. If you have buried a child, hear this plainly: this verse is not God's explanation of your loss. Jesus Himself refused to read suffering as proof of someone's sin (John 9:1–3).</p>
+          <p class="dev-p">This is one of the most important theological distinctions this series carries, and we must hold it carefully. The forgiveness is real. The consequence is also real. These two truths do not contradict each other — they are the same God operating on two different registers: justification and discipline. This is how He named Himself to Moses: "forgiving iniquity and transgression and sin, by no means clearing the guilty" (Exodus 34:7, NKJV).</p>
+          <p class="dev-p">We read "you shall not die" and exhale. In their first sense, those words lift the death sentence the Law demanded for adultery and murder (Leviticus 20:10; 24:17) — the very sentence David had just pronounced on himself. The Law offered no sacrifice for sin committed defiantly (Numbers 15:30–31), and David knew it: "For You do not desire sacrifice, or else I would give it" (Psalm 51:16, NKJV). His pardon rested on what the Law could not yet show — the sacrifice God would one day provide, when He would demonstrate His righteousness in having passed over sins previously committed (Romans 3:25). Paul would later hear in David's own words "the blessedness of the man to whom God imputes righteousness apart from works" (Romans 4:6, NKJV) — words Paul drew from David's own Psalm 32. Yet the text immediately reminds us that pardon does not mean immunity from the temporal fruit of our choices. David will not die — but he will live with what he has done. The household that concealment was meant to protect will carry the wound of these chapters for a generation. God had already described this kind of fatherhood in His covenant with David's house. Of David's son He said, "If he commits iniquity, I will chasten him with the rod of men," and then, "But My mercy shall not depart from him" (2 Samuel 7:14–15, NKJV). Now the sword "shall never depart" from David's house (12:10), and yet the mercy will not depart either. Hebrews 12:6 is the New Testament witness: "For whom the LORD loves He chastens" (NKJV). This is not contradiction — this is fatherhood. A father who forgives his child does not always remove the consequence; he walks with the child through it. That is precisely what God does with David in the chapters that follow: not as a punisher who will not relent, but as a covenant God who guards the honour of His own name (v. 14) and loves David too well to leave his formation unfinished.</p>
+          <p class="dev-take"><strong>Take-away:</strong> God's forgiveness removes the sentence; it does not always remove the school.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>What is the difference, in your own experience, between receiving forgiveness and accepting consequence? Where have you received one without fully accepting the other?</li>
+              <li>How does it change your understanding of God's discipline to know it comes from the same hand that put away David's sin?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, we receive Your forgiveness today — and we receive it with gratitude that runs deeper than words. You are a God who does not make us earn what You give freely; who does not require performance before mercy. But teach us also to receive what follows forgiveness: the honest reckoning with consequence, the long school of discipline, the refusal to let our sin leave us unchanged. Where we have received pardon but avoided the fruit of our choices — give us the courage to face what forgiveness does not erase. And in all of it — in both the mercy and the cost — let us know that we are not abandoned; we are being formed. In Jesus' name, Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dev-panel" id="mercy-day-5" data-day="5" role="tabpanel" hidden>
+      <aside class="dev-scripture">
+        <div class="kicker" style="margin-bottom:14px">Day 5 of 5</div>
+        <div style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;color:#fff">After the Fall</div>
+        <div style="font:italic 400 15px/1.5 'Public Sans';color:#f0a33c;margin-top:6px">What Restoration Actually Looks Like</div>
+        <div style="font:700 15px 'Bricolage Grotesque';color:#fff;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)">2 Samuel 12:20, 23–24 (NKJV)</div>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"So David arose from the ground, washed and anointed himself, and changed his clothes; and he went into the house of the LORD and worshiped. Then he went to his own house; and when he requested, they set food before him, and he ate."</p>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"But now he is dead; why should I fast? Can I bring him back again? I shall go to him, but he shall not return to me."</p>
+        <p style="font:italic 400 15px/1.7 'Public Sans';color:rgba(255,255,255,.85);margin:14px 0 0">"Then David comforted Bathsheba his wife, and went in to her and lay with her. So she bore a son, and he called his name Solomon. Now the LORD loved him."</p>
+      </aside>
+      <div class="dev-body">
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 1</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">What David Did Next</h3>
+          <p class="dev-p">After the child died, David's servants braced for collapse. They had watched him fast and weep and lie on the ground through seven days of intercession; now that the worst had come, they feared telling him. But when he heard, David's response was not what they expected. "So David arose from the ground, washed and anointed himself, and changed his clothes; and he went into the house of the LORD and worshiped" (2 Samuel 12:20, NKJV).</p>
+          <p class="dev-p">He worshiped. Not after an extended recovery. Not after the grief had run its full course. He arose — the same man who had spent a week on the floor — and the first place he went was the house of the LORD.</p>
+          <p class="dev-p">We might expect a man broken by consequence to retreat from the God who brought it. David moves toward Him. This is evidence that the forgiveness of verse 13 has reached more than the surface. A man who has only received a pardon avoids the one who sentenced him; a man who has truly been forgiven runs toward the one who received his confession.</p>
+          <p class="dev-p">His servants ask him: "What is this thing that you have done?" (2 Samuel 12:21, NKJV). And his answer in verse 23 carries the weight of a man who has learned to hold irreversible loss without bitterness or theological collapse: "I shall go to him, but he shall not return to me." This is not despair. This is trust that has been forged in the most painful week of his life. He cannot undo what has been done; he does not pretend otherwise; he leans forward — toward the God who is already there ahead of him.</p>
+          <p class="dev-take"><strong>Take-away:</strong> The evidence of genuine restoration is not the absence of loss; it is the ability to worship through it.</p>
+        </div>
+        <div class="dev-reading">
+          <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e">Reading 2</div>
+          <h3 style="font:700 24px/1.2 'Bricolage Grotesque';letter-spacing:-.01em;margin:8px 0 0">"The LORD Loved Him"</h3>
+          <p class="dev-p">The final word of this series is not David's repentance. It is God's love.</p>
+          <p class="dev-p">After the mourning, after the consequence, after the child's death and the grief and the long arc of accountability — a son is born to David and to Bathsheba, whom David now comforted in her own grief (v. 24). They name him Solomon. And the narrator adds, quietly and without ceremony: "Now the LORD loved him" (2 Samuel 12:24, NKJV). Nor does God leave that love unspoken: He sends word through Nathan — the same prophet who had said "You are the man" — and the child is named Jedidiah, "beloved of the LORD" (2 Samuel 12:25). The LORD who sent Nathan with a verdict now sends him with a name.</p>
+          <p class="dev-p">This sentence sits at the close of one of the darkest passages in David's story — and it is the most extraordinary thing in it. The covenant has not collapsed. The promise has not been revoked. God has not turned from David's house; He has turned toward the next generation of it, with a love that the preceding chapters have not diminished.</p>
+          <p class="dev-p">This is the shape of grace across the whole of Scripture — not the erasure of what has been broken, but the continuation of God's purpose through and beyond the breaking. Joseph's brothers tried to end the promise by selling him into slavery; the promise set him at the right hand of a throne. The disciples scattered on the night of the arrest; the resurrection found them and sent them out. Paul persecuted the church; God converted him and made him its most prolific witness. In every case the failure is real; the grace is more real.</p>
+          <p class="dev-p">David falls — and Matthew traces the line through Solomon all the way to Jesus of Nazareth, naming without embarrassment "her who had been the wife of Uriah" (Matthew 1:6–7, NKJV). The very chapter that records the worst thing David ever did is also the chapter that records the birth of the son through whom Matthew traces the line of the Son of God. Not because of the failure — but not stopped by it either. Grace wrote on through it, under it, and beyond it.</p>
+          <p class="dev-p">Psalm 51 carries the superscription: "A Psalm of David when Nathan the prophet went to him, after he had gone in to Bathsheba." And the man who fell as far as David fell could write: "Create in me a clean heart, O God, and renew a steadfast spirit within me" (Psalm 51:10, NKJV). Not the prayer of a man who has forgotten what he did — the prayer of a man who knows exactly what he did, and knows also exactly who God is.</p>
+          <p class="dev-p">David also prayed, "Do not take Your Holy Spirit from me" (Psalm 51:11, NKJV). He had watched the Spirit depart from Saul (1 Samuel 16:14). Those who belong to Christ pray from a different place: we have been sealed with the Holy Spirit of promise (Ephesians 1:13). Our prayer is not that He would stay, but that we would never grieve the One who has promised to (Ephesians 4:30).</p>
+          <p class="dev-take"><strong>Take-away:</strong> Restoration is not the story returning to how it was; it is God continuing to write His story through the life that has been given back to Him.</p>
+        </div>
+        <div class="dev-respond">
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Reflect</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 'Public Sans';color:#2e3346">
+              <li>What does it mean to you, personally, that the same chapter recording David's worst sin also records the birth of Solomon and the words "the LORD loved him"?</li>
+              <li>What would it look like for you to arise, wash, and go to the house of the LORD — not when the grief is over, but while it is still present?</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font:600 11px 'Public Sans';letter-spacing:.16em;text-transform:uppercase;color:#c07f1e;margin-bottom:12px">Pray</div>
+            <p style="font:italic 400 15px/1.7 'Public Sans';color:#2e3346;margin:0">Lord, we have walked through a hard text this week — and we are better for it. We have seen what displacement produces; what power does to a conscience; what sin costs and what mercy covers. We come to the end of this series not in triumph but in honesty — grateful that You are a God who writes the story forward, not backwards. Where we have fallen, receive us as You received David: not with the removal of all consequence, but with the word that puts away our sin and the love that does not depart. Create in us a clean heart. Renew a steadfast spirit within us. Let us never grieve Your Holy Spirit, by whom we are sealed. And let us arise — from whatever ground we have been lying on — and go to Your house. You are there. That is enough. In Jesus' name, Amen.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="treasuring-gods-grace" class="wrap dev-series" style="padding-top:56px;padding-bottom:84px" hidden>
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div>
+      <div class="kicker" style="color:#c07f1e;margin-bottom:12px">Devotional · Genesis 25</div>
+      <h2 style="font:700 36px/1.1 'Bricolage Grotesque';letter-spacing:-.02em;margin:0">Treasuring God's Grace</h2>
+    </div>
+    <p style="font:400 14px/1.6 'Public Sans';color:#5a5f70;max-width:400px;margin:0">A companion to the sermon <em>Treasuring God's Grace</em> by Ps Winston Chew. <a href="sermons.html" style="font-weight:700;color:#1d2a5b">Listen to the sermon &rarr;</a></p>
+  </div>
+
+  <div class="dev-tabs" role="tablist" aria-label="Devotional days" style="margin-top:32px">
       <button class="dev-tab" type="button" role="tab" aria-selected="true" data-day="1"><span class="dev-tab-n">Day 1</span><span class="dev-tab-t">Spoken Before We Moved</span></button>
       <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="2"><span class="dev-tab-n">Day 2</span><span class="dev-tab-t">The Split Table</span></button>
       <button class="dev-tab" type="button" role="tab" aria-selected="false" data-day="3"><span class="dev-tab-n">Day 3</span><span class="dev-tab-t">Stew And Scheming</span></button>
@@ -300,11 +560,19 @@
 
 <script>
 document.querySelectorAll('.dev-tab').forEach(function(t){t.addEventListener('click',function(){
-  var d=t.getAttribute('data-day');
-  document.querySelectorAll('.dev-tab').forEach(function(b){b.setAttribute('aria-selected',b===t)});
-  document.querySelectorAll('.dev-panel').forEach(function(p){p.hidden=p.getAttribute('data-day')!==d});
-  var s=document.getElementById('devotional');if(window.innerWidth<900&&s)window.scrollTo({top:s.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'});
+  var s=t.closest('.dev-series'),d=t.getAttribute('data-day');
+  s.querySelectorAll('.dev-tab').forEach(function(b){b.setAttribute('aria-selected',b===t)});
+  s.querySelectorAll('.dev-panel').forEach(function(p){p.hidden=p.getAttribute('data-day')!==d});
+  if(window.innerWidth<900)window.scrollTo({top:s.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'});
 })});
+function showSeries(id){
+  document.querySelectorAll('.dev-series').forEach(function(s){s.hidden=s.id!==id});
+  document.querySelectorAll('.series-btn').forEach(function(b){b.setAttribute('aria-selected',b.getAttribute('data-series')===id)});
+}
+document.querySelectorAll('.series-btn').forEach(function(b){b.addEventListener('click',function(){
+  var id=b.getAttribute('data-series');showSeries(id);history.replaceState(null,'','#'+id);
+})});
+var h0=location.hash.slice(1);if(document.getElementById(h0)&&document.getElementById(h0).classList.contains('dev-series'))showSeries(h0);
 </script>
 </body>
 </html>
