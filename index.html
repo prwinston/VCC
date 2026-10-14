@@ -3,100 +3,222 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0f6f86">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="description" content="A ten-question quiz on Galatians 5:16–26 from the sermon Don't Snap, Stretch. Walking in the Spirit with long-suffering and self-control.">
+<meta property="og:title" content="Don't Snap, Stretch · Sermon Quiz">
+<meta property="og:description" content="A steel ruler, a wooden ruler, and a very short fuse. Ten questions on Galatians 5.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#3b5670">
+<link rel="icon" href="/gal-5/icon.svg" type="image/svg+xml">
+<title>Don't Snap, Stretch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 <style>
-:root{--sand:#efe6d4;--sand-2:#e4d6bb;--ink:#2a2418;--muted:#6b5f49;--water:#0f6f86;--ochre:#b9822a;--card:#fbf7ee;--line:#d6c7a8;
- --display:"Bricolage Grotesque",ui-rounded,"Segoe UI",system-ui,sans-serif;--body:"Source Serif 4",Georgia,"Times New Roman",serif}
-@media (prefers-color-scheme: dark){:root{--sand:#1b1812;--sand-2:#25211a;--ink:#f1e9d8;--muted:#b4a68a;--water:#5ec4da;--ochre:#e0a94a;--card:#221e17;--line:#3a3326;color-scheme:dark}}
+/* Layout: one centered column; a 10 cm ruler tracks progress: steel for a right first answer, cracked wood for a snap. */
+:root{
+  --sand:#eceeea; --sand-2:#dde1dc; --ink:#1e2429; --muted:#5b6670;
+  --water:#3b5670; --water-2:#b9c6d2; --ochre:#9a6a34; --boom:#cf3b1f; --card:#f8f9f6; --line:#c9cfcb;
+  --ok-bg:#e2e9ef; --boom-bg:#f9e2db;
+  --steel-hi:#e9eef2; --steel:#a9b6c1; --steel-lo:#6d7d8b; --wood:#c89a62; --wood-lo:#8d6234;
+  --display:"Bricolage Grotesque",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --sand:#14181b; --sand-2:#1e2428; --ink:#e9edef; --muted:#9aa6af;
+  --water:#8fb3d1; --water-2:#2f4252; --ochre:#d8a565; --boom:#ff7f5e; --card:#1a1f23; --line:#323b42;
+  --ok-bg:#1f2d39; --boom-bg:#3a1f18;
+  --steel-hi:#dfe6ec; --steel:#9aa9b6; --steel-lo:#5d6c79; --wood:#b48452; --wood-lo:#7a5229; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --sand:#14181b; --sand-2:#1e2428; --ink:#e9edef; --muted:#9aa6af;
+  --water:#8fb3d1; --water-2:#2f4252; --ochre:#d8a565; --boom:#ff7f5e; --card:#1a1f23; --line:#323b42;
+  --ok-bg:#1f2d39; --boom-bg:#3a1f18;
+  --steel-hi:#dfe6ec; --steel:#9aa9b6; --steel-lo:#5d6c79; --wood:#b48452; --wood-lo:#7a5229; color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:40px 56px}
-.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+body{background:var(--sand);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:28px 48px}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+header{display:flex;flex-direction:column;gap:6px}
 .eyebrow{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre)}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,7vw,52px);line-height:1;margin:6px 0 0;letter-spacing:-.02em;text-wrap:balance}
-.sub{color:var(--muted);margin:8px 0 0;font-style:italic}
-.list{display:grid;gap:14px;list-style:none;margin:0;padding:0}
-.q{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
-.q:hover{border-color:var(--water);transform:translateY(-2px)}
-.q:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
-.q img{width:52px;height:52px;flex:none}
-.q div{min-width:0;display:flex;flex-direction:column;gap:2px}
-.ref{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--water)}
-.t{font-family:var(--display);font-weight:800;font-size:22px;line-height:1.15}
-.d{color:var(--muted);font-size:15px}
-.btn{font-family:var(--display);font-weight:700;color:var(--water);text-decoration:none}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,7vw,54px);line-height:1;margin:0;text-wrap:balance;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0;font-style:italic}
+/* ruler progress */
+.wells{display:grid;grid-template-columns:repeat(10,1fr);border:2px solid var(--line);border-radius:4px;overflow:hidden;background:var(--sand-2);counter-reset:cm}
+.well{height:34px;position:relative;border-right:1px solid var(--line);counter-increment:cm;transition:background .4s}
+.well:last-child{border-right:none}
+.well::before{content:"";position:absolute;left:50%;top:0;width:1px;height:9px;background:var(--muted);opacity:.6}
+.well::after{content:counter(cm);position:absolute;right:3px;bottom:2px;font-family:var(--display);font-weight:700;font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.well.current{box-shadow:inset 0 0 0 2px var(--water)}
+.well.full{background:linear-gradient(180deg,var(--steel-hi),var(--steel) 55%,var(--steel-lo))}
+.well.full::after{color:var(--ink)}
+.well.dry{background:linear-gradient(115deg,var(--wood) 0 46%,var(--wood-lo) 46% 54%,var(--wood) 54%)}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--display);font-size:14px;color:var(--muted)}
+.meta b{color:var(--ink);font-variant-numeric:tabular-nums}
+/* card */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(18px,4vw,30px);display:flex;flex-direction:column;gap:18px;position:relative}
+.qref{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--water)}
+.q{font-family:var(--display);font-weight:700;font-size:clamp(21px,4vw,27px);line-height:1.2;margin:0;text-wrap:balance}
+.opts{display:grid;gap:10px}
+.opt{font:inherit;font-size:16px;text-align:left;padding:13px 16px;border-radius:10px;border:2px solid var(--line);background:var(--sand);color:var(--ink);cursor:pointer;display:flex;gap:12px;align-items:flex-start;transition:transform .12s,border-color .12s}
+.opt:hover:not(:disabled){border-color:var(--water);transform:translateX(3px)}
+.opt:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.opt .k{font-family:var(--display);font-weight:800;color:var(--ochre);min-width:1.2em}
+.opt.wrong{border-color:var(--boom);background:var(--boom-bg);opacity:.75;cursor:not-allowed;text-decoration:line-through;text-decoration-color:var(--boom)}
+.opt.right{border-color:var(--water);background:var(--ok-bg)}
+.opt:disabled{cursor:default}
+/* feedback */
+.fb{border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.fb.ok{background:var(--ok-bg);border:2px solid var(--water)}
+.fb.boom{background:var(--boom-bg);border:2px solid var(--boom)}
+.fb h3{font-family:var(--display);font-weight:800;margin:0;font-size:26px;letter-spacing:-.01em}
+.fb.ok h3{color:var(--water)} .fb.boom h3{color:var(--boom)}
+.fb p{margin:0}
+.fb .lbl{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.verse{font-style:italic;border-left:3px solid var(--ochre);padding-left:12px;color:var(--ink)}
+.btn{font-family:var(--display);font-weight:700;font-size:16px;padding:12px 22px;border-radius:999px;border:none;background:var(--water);color:var(--card);cursor:pointer;align-self:flex-start}
+.btn:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--water);border:2px solid var(--water)}
+/* animations */
+.shake{animation:shake .45s}
+@keyframes shake{20%{transform:translateX(-8px) rotate(-1deg)}40%{transform:translateX(8px) rotate(1deg)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
+.burst{position:absolute;pointer-events:none;inset:0;overflow:visible}
+.p{position:absolute;width:10px;height:10px;border-radius:50%;animation:fly .9s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--x),var(--y)) scale(.3);opacity:0}}
+.pop{animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{0%{transform:scale(.6)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion: reduce){.shake,.pop,.p{animation:none}.p{display:none}.well{transition:none}}
+/* result */
+.result{text-align:left}
+.score{font-family:var(--display);font-weight:800;font-size:clamp(56px,14vw,96px);line-height:1;color:var(--water);font-variant-numeric:tabular-nums}
+.rank{font-family:var(--display);font-weight:800;font-size:24px;margin:0}
 footer{font-size:13px;color:var(--muted);text-align:center}
-@media (prefers-reduced-motion: reduce){.q{transition:none}.q:hover{transform:none}}
 </style>
-<title>Sermon Quizzes</title>
-<meta name="description" content="Short, fun quizzes on recent Sunday sermons. Pick a sermon and test what you heard.">
+<style>body{margin:0}</style>
 </head>
 <body>
+
 <div class="wrap">
   <header>
-    <span class="eyebrow">After Sunday</span>
-    <h1>Sermon Quizzes</h1>
-    <p class="sub">Pick a sermon and see how much of the message stayed with you.</p>
+    <span class="eyebrow">Walking in the Spirit · Galatians 5:16–26</span>
+    <h1>Don't Snap, Stretch</h1>
+    <p class="sub">Ten centimetres of ruler. Get each one right first time and it turns to steel.</p>
   </header>
 
-  <!-- To add a quiz: copy one <li> block, put the newest sermon at the top. -->
-  <ul class="list">
-    <li>
-      <a class="q" href="https://trumpet-rally-quiz.vwx-mapp.co.uk/">
-        <img src="/favicon.svg" alt="">
-        <div>
-          <span class="ref">Nehemiah 4 · 10 Oct 2026</span>
-          <span class="t">Wherever You Hear the Trumpet</span>
-          <span class="d">15 questions · English &amp; 中文 · Sneers, swords and trowels, and a trumpet that rallies the wall</span>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a class="q" href="/2sam-11/">
-        <img src="/favicon.svg" alt="">
-        <div>
-          <span class="ref">2 Samuel 11–12 · 5-Day Devotional</span>
-          <span class="t">The Weight of His Mercy</span>
-          <span class="d">10 questions · A rooftop, a letter, a parable, and a name from the LORD</span>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a class="q" href="/gen-26/">
-        <img src="/favicon.svg" alt="">
-        <div>
-          <span class="ref">Genesis 26 · 4 Oct 2026</span>
-          <span class="t">When God Makes Room</span>
-          <span class="d">10 questions · Famine, fear, three wells and one night at Beersheba</span>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a class="q" href="/gen-25/">
-        <img src="/gen-25/icon.svg" alt="">
-        <div>
-          <span class="ref">Genesis 25:19–34 · 20 Sep 2026</span>
-          <span class="t">Treasuring God's Grace</span>
-          <span class="d">10 questions · Two brothers, one bowl of red stew, and a birthright</span>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a class="q" href="/gal-5/">
-        <img src="/favicon.svg" alt="">
-        <div>
-          <span class="ref">Galatians 5:16–26 · 30 Aug 2026</span>
-          <span class="t">Don't Snap, Stretch</span>
-          <span class="d">10 questions · Walking in the Spirit: long-suffering and self-control</span>
-        </div>
-      </a>
-    </li>
-  </ul>
+  <div class="wells" id="wells" aria-hidden="true"></div>
+  <div class="meta"><span>Centimetre <b id="qnum">1</b> of 10</span><span>First-try answers: <b id="score">0</b></span></div>
 
-  <footer>Scripture quotations from the New King James Version (NKJV).</footer>
+  <main class="card" id="card" aria-live="polite"></main>
+
+  <footer><a href="/" style="color:var(--water);font-family:var(--display);font-weight:700;text-decoration:none">← All sermon quizzes</a><br>Scripture quotations from the New King James Version (NKJV).</footer>
 </div>
+
+<script>
+const Q=[
+{ref:"Galatians 5:15–16",q:"While the Galatians argued about the law, what does Paul say was happening in their church?",
+ o:["They stopped giving offerings","They were biting and devouring one another","They skipped the prayer meetings","They returned to their old idols"],a:1,
+ v:"“But if you bite and devour one another, beware lest you be consumed by one another!” (v. 15)",
+ e:"They were so busy defending their religion that they stopped noticing how they treated one another. Paul's answer is not more rules but a Person: “Walk in the Spirit, and you shall not fulfill the lust of the flesh” (v. 16). This is the new covenant God promised long before: “I will put My Spirit within you and cause you to walk in My statutes” (Ezek 36:27). The Galatians had received that Spirit by faith (Gal 3:2), not by the law."},
+{ref:"Galatians 5:19–21",q:"Which of these appears in Paul's list of the works of the flesh?",
+ o:["Laziness","Gluttony","Outbursts of wrath","Worrying"],a:2,
+ v:"“…hatred, contentions, jealousies, outbursts of wrath, selfish ambitions, dissensions, heresies, envy…” (v. 20–21)",
+ e:"We usually say “not me” to adultery and idolatry. But Paul puts the respectable sins (contentions, jealousies, outbursts of wrath) right in the middle of the scandalous ones. In God's eyes they belong to the same family and grow from the same root, the flesh. The fallen nature we inherited from Adam shows up in church pews as much as anywhere, which is why we need a new life, not just better manners."},
+{ref:"Matthew 7:3",q:"In the sermon, a contentious person looks at a white sheet of paper with one small black dot. What do they see?",
+ o:["Only the white space","Only the dot","A picture to colour in","Nothing at all"],a:1,
+ v:"“And why do you look at the speck in your brother's eye, but do not consider the plank in your own eye?” (Matt 7:3)",
+ e:"Contention fixes on the dot and never sees the white space. Jesus turns the mirror around: deal with the plank in your own eye first. Paul agrees: “if we would judge ourselves, we would not be judged” (1 Cor 11:31). Judging belongs to God, and the gospel tells us the Judge took the verdict we deserved. That's why we can be honest about our planks without fear."},
+{ref:"Luke 9:54–55",q:"Which two disciples wanted to call down fire from heaven on a Samaritan village?",
+ o:["Peter and Andrew","James and John","Philip and Thomas","Paul and Barnabas"],a:1,
+ v:"“But He turned and rebuked them, and said, ‘You do not know what manner of spirit you are of.’” (Luke 9:55)",
+ e:"James and John were thinking of Elijah, who once called fire down on his enemies (2 Kings 1). But Jesus marks a turn in the story of redemption: “For the Son of Man did not come to destroy men's lives but to save them” (Luke 9:56). Using the name of Jesus to curse people is not the Spirit of Jesus. The Spirit He gives builds people up rather than burning them down."},
+{ref:"Ephesians 4:26–27",q:"“Be angry, and do not sin.” What does Paul say unchecked anger gives the devil?",
+ o:["The last word","A place","A crown","A reward"],a:1,
+ v:"“‘Be angry, and do not sin’: do not let the sun go down on your wrath, nor give place to the devil.” (Eph 4:26–27)",
+ e:"Anger itself is not always sin. God Himself is angry at evil. But unchecked anger hands the devil a place to stand in our lives, and in that moment we can see the devil in everyone else but not the opening we just gave him. The psalmist's counsel still stands: “Cease from anger, and forsake wrath; do not fret—it only causes harm” (Ps 37:8)."},
+{ref:"Galatians 5:20, 22",q:"The Greek word for longsuffering, makrothumia, joins the word “long” to which root?",
+ o:["The root for “love”","The root for “waiting”","The same root as “outbursts of wrath”","The root for “strength”"],a:2,
+ v:"“But the fruit of the Spirit is love, joy, peace, longsuffering, kindness, goodness, faithfulness, gentleness, self-control.” (v. 22–23)",
+ e:"Based on standard lexical resources, thumos is a boiling-up of passion (thumoi, “outbursts of wrath,” v. 20), and makro-thumia is literally “long” plus that same root. The flesh has a short fuse; the Spirit gives a long one. And this is God's own character first: “The LORD, the LORD God, merciful and gracious, longsuffering” (Exod 34:6). His longsuffering leads us to repentance (Rom 2:4). We stretch for others because God has stretched for us."},
+{ref:"James 1:19–20",q:"Which Malaysian word did the sermon use for long-suffering?",
+ o:["Tahan","Lepak","Kiasu","Boleh"],a:0,
+ v:"“…let every man be swift to hear, slow to speak, slow to wrath; for the wrath of man does not produce the righteousness of God.” (James 1:19–20)",
+ e:"Can you tahan or not? Tahan always involves time. It means waiting before you conclude, the way a husband could wait and ask what his wife is feeling instead of snapping when she walks out of the room. James gives the rule: swift to hear, slow to speak, slow to wrath. Our anger cannot produce God's righteousness. Only His work in us can. (Lepak is hanging out, kiasu is fear of losing out, and boleh is “can do”!)"},
+{ref:"Isaiah 40:31",q:"The wooden ruler cracked when bent, but the steel ruler didn't. What was the point?",
+ o:["Steel is more expensive than wood","Strong Christians never feel pressure","The Spirit makes us strong and flexible, able to bend without breaking","You should replace your old rulers"],a:2,
+ v:"“But those who wait on the LORD shall renew their strength; they shall mount up with wings like eagles.” (Isa 40:31)",
+ e:"The Spirit does not make us hard. He makes us steel that bends, not wood that breaks. And the bending is learned in the secret place: “Rest in the LORD, and wait patiently for Him” (Ps 37:7). People who never wait on God rarely have patience with people. The Spirit stretches us in private so that we can stretch in public."},
+{ref:"Proverbs 25:28",q:"A person with no rule over his own spirit is like what?",
+ o:["A house built on sand","A ship without a sail","A city broken down, without walls","A tree without roots"],a:2,
+ v:"“Whoever has no rule over his own spirit is like a city broken down, without walls.” (Prov 25:28)",
+ e:"Long-suffering creates the space; self-control (enkrateia, self-mastery) governs what we do in it. Paul puts it last on the list, like the guard at the gate. Peter links it to knowledge: “to knowledge self-control” (2 Pet 1:6), because the more you know about people, the more you need to hold your tongue. And “he who rules his spirit” is greater “than he who takes a city” (Prov 16:32)."},
+{ref:"Galatians 5:24–25",q:"According to Paul, what have “those who are Christ's” done with the flesh?",
+ o:["They must try harder to control it","They will defeat it one day in heaven","They have crucified it with its passions and desires","They earned the Spirit by obeying the law"],a:2,
+ v:"“And those who are Christ's have crucified the flesh with its passions and desires. If we live in the Spirit, let us also walk in the Spirit.” (v. 24–25)",
+ e:"Notice the tense: it's already done, at the cross. Jesus said, “It is finished!” (John 19:30). Trying harder with the flesh only produces a more religious flesh, which was exactly the Galatian problem. The fruit is the Spirit's, not our effort. And Jesus is the ultimate stretch: “when He was reviled, did not revile in return… but committed Himself to Him who judges righteously” (1 Pet 2:23). He held the space all the way to the cross, so we walk in the Spirit out of gratitude (2 Cor 5:14), not debt."}
+];
+const RANKS=[
+ [10,"Steel Ruler!","Ten for ten. Bent under pressure and never broke."],
+ [7,"Long Fuse","Plenty of tahan. Just a spark or two along the way."],
+ [4,"Still Stretching","A few snaps, but the Spirit isn't finished with any of us (Phil 1:6)."],
+ [0,"Snap!","That round blew a few fuses! Take a breath, hold the space, and try again."]
+];
+const L="ABCD";
+let i=0,score=0,tries=0,firstTry=[];
+const card=document.getElementById('card'),wells=document.getElementById('wells');
+function drawWells(){wells.innerHTML="";for(let k=0;k<10;k++){const d=document.createElement('div');d.className='well'+(firstTry[k]===true?' full':firstTry[k]===false?' full dry':'')+(k===i&&i<10?' current':'');wells.appendChild(d)}
+ document.getElementById('qnum').textContent=Math.min(i+1,10);document.getElementById('score').textContent=score}
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function render(){
+ tries=0;drawWells();const q=Q[i];
+ card.innerHTML=`<span class="qref">${q.ref}</span><h2 class="q">${esc(q.q)}</h2>
+ <div class="opts">${q.o.map((t,k)=>`<button class="opt" id="opt${k}" data-k="${k}"><span class="k">${L[k]}</span><span>${esc(t)}</span></button>`).join("")}</div>
+ <div id="fb"></div>`;
+ card.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>pick(+b.dataset.k,b)));
+ card.querySelector('.opt').focus({preventScroll:true});
+}
+function burst(el,colors,n){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const r=el.getBoundingClientRect(),c=card.getBoundingClientRect();
+ const box=document.createElement('div');box.className='burst';card.appendChild(box);
+ const cx=r.left-c.left+r.width/2,cy=r.top-c.top+r.height/2;
+ for(let k=0;k<n;k++){const p=document.createElement('span');p.className='p';const a=Math.random()*Math.PI*2,d=60+Math.random()*110;
+  p.style.left=cx+'px';p.style.top=cy+'px';p.style.background=colors[k%colors.length];
+  p.style.setProperty('--x',Math.cos(a)*d+'px');p.style.setProperty('--y',Math.sin(a)*d+'px');box.appendChild(p)}
+ setTimeout(()=>box.remove(),1000);
+}
+function pick(k,btn){
+ const q=Q[i],fb=document.getElementById('fb');tries++;
+ const cs=getComputedStyle(document.documentElement);
+ if(k===q.a){
+  if(firstTry[i]===undefined){firstTry[i]=true;score++}
+  card.querySelectorAll('.opt').forEach(b=>b.disabled=true);btn.classList.add('right');
+  burst(btn,[cs.getPropertyValue('--water'),cs.getPropertyValue('--water-2'),cs.getPropertyValue('--ochre')],28);
+  const last=i===Q.length-1;
+  fb.innerHTML=`<div class="fb ok pop"><h3>Congratulations! 🍇</h3>
+   <p class="verse">${esc(q.v)}</p>
+   <span class="lbl">In the story of redemption</span><p>${esc(q.e)}</p>
+   <button class="btn" id="next">${last?"See my score":"Stretch to the next one →"}</button></div>`;
+  drawWells();
+  const nb=document.getElementById('next');nb.addEventListener('click',()=>{i++;i<Q.length?render():finish()});nb.focus({preventScroll:true});
+ }else{
+  if(firstTry[i]===undefined)firstTry[i]=false;
+  btn.classList.add('wrong');btn.disabled=true;
+  card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');
+  burst(btn,[cs.getPropertyValue('--boom'),cs.getPropertyValue('--ochre'),cs.getPropertyValue('--muted')],22);
+  fb.innerHTML=`<div class="fb boom pop"><h3>Kaboom! 💥</h3><p>That one blew the fuse. Stretch, don't snap, and try another answer.</p></div>`;
+ }
+}
+function finish(){
+ i=10;drawWells();
+ const r=RANKS.find(x=>score>=x[0]);
+ card.innerHTML=`<div class="result" style="display:flex;flex-direction:column;gap:14px">
+  <span class="qref">Your ruler</span>
+  <div class="score">${score}<span style="font-size:.4em;color:var(--muted)"> / 10</span></div>
+  <p class="rank">${r[1]}</p><p style="margin:0">${r[2]}</p>
+  <p class="verse">“If we live in the Spirit, let us also walk in the Spirit.” (Galatians 5:25)</p>
+  <p style="margin:0">Because those who belong to Christ have crucified the flesh, the Spirit grows in us long-suffering that stretches the space, and self-control that governs it. Don't snap. Stretch.</p>
+  <button class="btn ghost" id="again">Stretch all ten again</button></div>`;
+ document.getElementById('again').addEventListener('click',()=>{i=0;score=0;firstTry=[];render()});
+ if(score>=7)burst(card.querySelector('.score'),[getComputedStyle(document.documentElement).getPropertyValue('--water'),getComputedStyle(document.documentElement).getPropertyValue('--ochre')],40);
+}
+render();
+</script>
 </body>
 </html>
